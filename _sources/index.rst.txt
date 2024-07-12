@@ -34,8 +34,17 @@ Project Empower
    Ethical Data Analysis Guidelines <unit_5/ethics>
    Statistical Analysis <unit_5/statistical_analysis>
    Interpreting Results in Relation to Project <unit_5/interpret_results>
+   Understanding the Wider Significance of Your Findings <unit_5/wider_significance>
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 6
 
+   Options for the Future <unit_6/options_for_future>
+   Writing an Academic Paper <unit_6/writing_academic_paper>
+   Publishing Scientific Papers <unit_6/publishing_research>
+   Creating a Research Poster <unit_6/creating_research_poster>
+   
 .. Indices and tables
 .. ==================
 

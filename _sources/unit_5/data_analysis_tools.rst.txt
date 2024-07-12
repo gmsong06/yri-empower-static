@@ -2,7 +2,7 @@
 Data Analysis Tools
 =============
 
-**Author**: John Kessler and Ankit Biswas
+**Author**: John Kessler, Ankit Biswas
 
 .. toctree::
    :maxdepth: 1

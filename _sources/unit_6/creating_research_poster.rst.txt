@@ -1,0 +1,110 @@
+=============
+Creating a Research Poster
+=============
+
+**Author**: Karan Sadiora, Felix Ma
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   Ethical Data Analysis Guidelines <unit_5/ethics>
+
+
+.. contents:: Table of Contents
+   :depth: 3
+
+A research poster is a common and effective way that you can present a scientific project of yours to a wider audience. A good poster displays your project to the world, so being able to create effective designs is a critical skill to have as a developing researcher. 
+
+The Purpose of a Research Poster
+============
+
+A research poster is, first and foremost, a poster. This means that like all other posters, they are a blend of meaningful information and attention-grabbing design. In research posters, these two principles are especially important – posters are a common way that people in academia communicate their projects and presentations to others. They make appearances at conferences, seminars, and science fairs, and summarize research and projects to reach a broader audience. To achieve this, posters utilize succinct text, images, tables, plots, figures, and virtually any other creative format for conveying information. Then, once the perfect poster is created, a scientist will often stand by near their poster at an event and further discuss their ideas more in-depth with others in attendance. 
+
+Poster Components
+==========
+
+As touched on in the previous section, a good poster is not limited by more “conventional” types of scientific text and figures. In fact, the best posters often leverage unique techniques and infographics to convey information in newly effective and interesting ways. However, there are a couple of aspects that are the bread and butter of each poster. 
+
+Firstly, the main title or topic of a poster is almost always displayed prominently in the top center of the poster. This title is very commonly the only part of a poster that a passing bystander may read, and whether the title is visible, clear, and effective can determine whether that bystander ends up choosing to come to interact with you further. Therefore, it is always important to ensure that your poster’s topic is well-placed and readable from a distance.
+
+Beneath the title, however, the design and layout of a poster is entirely up to the scientist’s discretion. Many posters are often separated into 3, or even 4 vertical columns, but there are certainly other ways of structuring content. Meanwhile, the text on a poster should not be heavy– bullet points and prominent subheadings should convey the core concepts of your poster, and the scientist should be the one explaining everything more in conversation. Figures and images should also be prominently featured to help convey information and break up big walls of text. Images help to make information more visually digestible and appealing (just be sure to cite any image or figure that you did not create yourself). One of the most important aspects to include in your poster are graphs and charts. These statistical visuals are undoubtedly the most effective way of legitimating your project via statistical and quantitative information and facts. Finally, posters often include relevant references and acknowledgments as a courtesy to those who might have helped you with your project.
+
+Although highly dependent on your field of research and what type of study that you have ran, the main component of a research poster include the following:
+
+* Title
+* Introduction
+* Methodology
+* Results
+* Analysis
+* Discussion
+* Sources
+
+These are general categories that most posters include, similar to this order. A research poster is, after all, just a reformat of your research paper with more visual representations. 
+
+Poster Design
+=============
+The information actually included in a poster is important. However, the visual representation is just as essential. The whole point of a poster is to have an easy-on-the-eyes format of your project which can be easily communicated to your fellow researchers in an efficient and effective manner. Because of this, it's important to experiment with different visual practices, such as a color scheme, text size, and information flow. There isn't one singular format that's the best to use in every case, and again, it all depends on the type of research that you are conducting. Some poster examples are included below for inspiration. 
+
+.. note::
+    `Poster Presentation Examples <https://ur.umbc.edu/poster-presentation-examples/>`_ 
+
+
+.. quizdown::
+
+    ---
+    primary_color: '#543bbf'
+    secondary_color: white
+    text_color: black
+    shuffle_questions: false
+    ---
+
+   ## Which are possible components of a poster?
+
+   - [ ] Bullet points
+   - [ ] Figures
+   - [ ] Infographics
+   - [x] All of the above
+
+   ## What is the main goal of a poster?
+
+    - [ ] To be a work of art
+    - [x] To visually summarize a project
+    - [ ] To document the entirety of your research
+    - [ ] To recognize your references and acknowledgements
+
+
+    ## How should a poster be stylistically designed?
+
+    - [x] Clean and clear
+    - [ ] Flowery and ornamented
+    - [ ] Flashy and garish
+    - [ ] Intricate and comple
+
+.. note::
+    `What is a Research Poster? - Boston University <https://www.bu.edu/asor/am/2017/documents/poster-tips.pdf>`_ 
+
+    `Preparing and Presenting Effective Research Posters - PMC <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1955747/>`_ 
+
+    `Making an Effective Research Poster <https://urc.ucdavis.edu/sites/g/files/dgvnsk3561/files/inline-files/How%20to%20Make%20an%20Effective%20Academic%20Poster_2.pdf>`_ 

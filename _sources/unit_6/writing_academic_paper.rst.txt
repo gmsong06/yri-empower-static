@@ -1,0 +1,115 @@
+=============
+Writing an Academic Paper
+=============
+
+**Author**: Ankit Biswas
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   Ethical Data Analysis Guidelines <unit_5/ethics>
+
+
+.. contents:: Table of Contents
+   :depth: 3
+
+
+LaTeX
+==============================
+
+The number one prerequisite to writing an academic paper is knowledge of how to use LaTeX, a professional typesetting system that aims to streamline the process of writing manuscripts. As opposed to word processors such as Google Docs or Word, you do not need to minutely format your document or determine details such as the margins or the vertical placement of figures. These details are automatically handled by the TeX system, and rather the focus of LaTeX is the content itself. As such, LaTeX takes the form of a dedicated programming language for compiling documents.
+
+The world’s number one platform on which to write LaTeX is  https://www.overleaf.com/. It’s state-of-the-art (and more importantly, free) interface is important for collaboration. We suggest messing around with some of the fiducial LaTeX templates on Overleaf before trying to create your own document. We also highly recommend watching the tutorials below. 
+
+.. note::
+    `LaTeX for Students – A Simple Quickstart Guide <https://www.youtube.com/watch?v=lgiCpA4zzGU&feature=youtu.be>`_ 
+
+    `How to write a thesis using LaTeX **full tutorial** <https://www.youtube.com/watch?v=zqQM66uAig0>`_ 
+
+Choosing the Right Journal
+--------------------------
+The first step in publishing a paper is selecting the appropriate journal for your work. Each journal has a specific focus, audience, and set of requirements. To ensure that your work will be a good fit, make sure that the journal’s focus aligns with your research area and that it reaches your target audience. As a high schooler, you will likely be rejected from submission to one or more journals. Some journals have high rejection rates, so be realistic about your chances of acceptance. 
+
+.. note::
+    `Journal Finder (Elsevier) <https://journalfinder.elsevier.com/>`_ 
+
+    `Sci Journal <https://www.scijournal.org/>`_ 
+
+Journal-Specific Guidelines
+-------------------------
+Throughout your literature review, you may have noticed that papers from various journals look different. This is largely because of journal-specific LaTeX guidelines or templates. Often, journals will provide their own LaTeX article styles for you to use and implement. Some may provide different commands to generate figures or citations. When writing your paper, it’s important to write it in the style of the journal you’re hoping to submit to in order to save yourself a headache! 
+
+.. tip::
+    Let’s look at the journal submission guidelines for MNRAS (Monthly Notices of the Royal Astronomical Society), the largest journal in astronomy (https://academic.oup.com/mnras/pages/General_Instructions)!
+
+In section 2.1, they state that “For authors preparing their manuscripts using LaTeX, MNRAS has its own LaTeX class files which simulate the appearance of the journal page. Authors are encouraged to use these…” As such, you will need to take the LaTeX format files they provide on their website and drag them into Overleaf for the proper formatting. 
+
+Because this is a journal based in Oxford, they specify in section 6.2 that “Spelling and grammar
+Please use British English spellings – e.g. centre not center, sulphur not sulfur and labelled not labeled. For words ending in -ise/yse or -ize follow this style: use -ise/yse for devise, surprise, comprise, revise, exercise, analyse; use -ize for recognize, criticize, minimize, emphasize, organize, ionize, polarize, parametrize (note the spelling of this word in particular).” 
+
+While these are quite minor formatting guidelines, it’s beneficial to keep them in mind to prevent unnecessary edits. 
+
+Writing an Effective Abstract
+==========================
+The abstract is a crucial component of your paper. It serves as a summary and a first impression for potential readers and reviewers. A well-written abstract can significantly increase the likelihood of your paper being read and cited. 
+
+**Structure of an abstract:**
+
+* Background (2-3 sentences)
+* Purpose (1 sentence)
+* Methods (2-5 sentences)
+* Results (2-3 sentences)
+
+**Tips:**
+
+* Keep it concise (usually 150-250 words).
+* Avoid jargon and acronyms.
+* Focus on the most critical aspects of your research.
+
+Structuring a Paper
+===================
+Before you start hammering away at your manuscript, it’s a great idea to structure and outline your paper. A conventional scientific paper follows the following format:
+
+**Introduction**: Brief but detailed summary of your literature review, contains concepts and past research necessary to understand and provide context to your paper.
+
+**Data/Observations (Optional)**: This section, which is also optional, is common in fields such as data science or astronomy. For example, if you’ve gotten the data that you will be analyzing through a telescope, it is best to discuss the nature of those observations (time, location, area observed, etc) here. If you are sourcing your data from some large database, you should probably discuss it here. 
+
+**Methods**: What did you do in your project? Describe your methods extremely thoroughly, to the point where an outsider who is reading your paper can replicate your process. That is the gold standard.
+
+**Results**: What data did you collect from your data? Do not discuss any interpretations here, but discuss what came from your data and how you analyzed it. 
+
+**Discussion**: What does your data mean? How does it relate to the central question asked at the beginning of your project? Does it indicate any particular trends or patterns? What is the wider significance of your research? Discuss all interpretations of your research in this section. Be honest about possible drawbacks and pitfalls in your methodology. 
+
+**Conclusion**: Summarize all your findings in this section. Do not just restate your introduction or results section. Provide a brief but concise explanation of your experimental procedure and what came out of it. You can also discuss potential future endeavors in this section. 
+
+Note that the sections described above are just suggested guidelines. Papers will often write a completely separate section based on the content of their research. For example, a paper about physics simulations may write a section called Theoretical prerequisites. Furthermore, each section in your paper will most likely have several subsections, which you can customize however you please.
+
+Extras
+========
+Figures and tables must be prepared to the guidelines of the journal. Usually, they may give a minimum quality for images or a particular format they want for the table. For these, see the journal-specific guidelines. 
+
+You may also include an appendix for additional data or experiments that should be included but are not necessary to understand the body of the paper and may have otherwise clogged up the manuscript. You should strive to make the code and data for your project open source for other researchers to see and use. While this isn’t required for a lot of journals, it is still good practice and in good faith to do so. 
+
+Finally, you must include references for each idea that is not originally yours. LaTeX has an automatic citation-tracking and bibliography creation system, so citing papers in your text should be fairly trivial. Keep in mind to reference the correct papers for the correct ideas, and try to paraphrase instead of directly quoting from other authors. In your acknowledgements section after your conclusion, you should recognize any software tools, instruments, funding, and external help you had that assisted you in your research. 

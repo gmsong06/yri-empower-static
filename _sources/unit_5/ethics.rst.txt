@@ -2,7 +2,7 @@
 Ethical Data Analysis Guidelines
 =============
 
-**Author**: Karan Sadiora and Felix Ma
+**Author**: Karan Sadiora, Felix Ma
 
 .. toctree::
    :maxdepth: 1

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Writing an Academic Paper | Project Empower  documentation</title>
+<meta content="Writing an Academic Paper | Project Empower  documentation" property="og:title"/>
+<meta content="Writing an Academic Paper | Project Empower  documentation" name="twitter:title"/>
+<link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=ecdfb4fc" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/custom.css?v=b32d188c" rel="stylesheet" type="text/css"/>
+<link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
+<link href="../_static/yri_icon_dark.png" rel="icon"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="publishing_research.html" rel="next" title="Publishing Scientific Papers"/>
+<link href="options_for_future.html" rel="prev" title="Options for the Future"/>
+<script>
+    <!-- Prevent Flash of wrong theme -->
+      const userPreference = localStorage.getItem('darkMode');
+      let mode;
+      if (userPreference === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        mode = 'dark';
+        document.documentElement.classList.add('dark');
+      } else {
+        mode = 'light';
+      }
+      if (!userPreference) {localStorage.setItem('darkMode', mode)}
+    </script>
+</head>
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
+<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
+      Skip to content
+    </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
+<div class="hidden mr-4 md:flex">
+<a class="flex items-center mr-6" href="../index.html">
+<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/yri_icon_dark.png" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Project Empower  documentation</span>
+</a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
+<svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
+</svg>
+<span class="sr-only">Toggle navigation menu</span>
+</button>
+<div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
+<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="../search.html" class="relative flex items-center group" id="searchbox" method="get">
+<input aria-label="Search the docs" class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" id="search-input" name="q" placeholder="Search ..." type="search" x-ref="search"/>
+<kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
+<span class="text-xs">⌘</span>
+    K
+  </kbd>
+</form>
+</div>
+<nav class="flex items-center space-x-1">
+<button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'" aria-label="Color theme switcher" class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button">
+<svg class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z"></path>
+</svg>
+<svg class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z"></path>
+</svg>
+</button>
+</nav>
+</div>
+</div>
+</header>
+<div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
+<a class="!justify-start text-sm md:!hidden bg-background" href="../index.html">
+<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/yri_icon_dark.png" width="16"/><span class="font-bold text-clip whitespace-nowrap">Project Empower  documentation</span>
+</a>
+<div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
+<div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/invisible_stars.html">Searching for Invisible Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/sritej.html">Sritej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/microbiological_wars.html">Microbiological Wars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/oncology.html">Oncology: A Glimmer of Hope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/smelling_cancer.html">Smelling Cancer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 5</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/intro_to_data_analysis.html">An Introduction to Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/data_analysis_tools.html">Data Analysis Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/ethics.html">Ethical Data Analysis Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/statistical_analysis.html">Statistical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/interpret_results.html">Interpreting Results in Relation to Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/wider_significance.html">Understanding the Wider Significance of Your Findings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 6</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="options_for_future.html">Options for the Future</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing an Academic Paper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing_research.html">Publishing Scientific Papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_research_poster.html">Creating a Research Poster</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<button @click="showSidebar = false" class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100" type="button">
+<svg class="h-4 w-4" fill="currentColor" height="24" stroke="none" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z"></path>
+</svg>
+</button>
+</aside>
+<main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+<div class="w-full min-w-0 mx-auto">
+<nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
+<a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../index.html">
+<span class="hidden md:inline">Project Empower  documentation</span>
+<svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
+</svg>
+</a>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Writing an Academic Paper</span>
+</nav>
+<div id="content" role="main">
+<section id="writing-an-academic-paper">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">Writing an Academic Paper</a><a class="headerlink" href="#writing-an-academic-paper" title="Link to this heading"><span>#</span></a></h1>
+<p><strong>Author</strong>: Ankit Biswas</p>
+
+
+
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#writing-an-academic-paper" id="id1">Writing an Academic Paper</a></p>
+<ul>
+<li><p><a class="reference internal" href="#latex" id="id2">LaTeX</a></p>
+<ul>
+<li><p><a class="reference internal" href="#choosing-the-right-journal" id="id3">Choosing the Right Journal</a></p></li>
+<li><p><a class="reference internal" href="#journal-specific-guidelines" id="id4">Journal-Specific Guidelines</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#writing-an-effective-abstract" id="id5">Writing an Effective Abstract</a></p></li>
+<li><p><a class="reference internal" href="#structuring-a-paper" id="id6">Structuring a Paper</a></p></li>
+<li><p><a class="reference internal" href="#extras" id="id7">Extras</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="latex">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">LaTeX</a><a class="headerlink" href="#latex" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#latex'"><span>#</span></a></h2>
+<p>The number one prerequisite to writing an academic paper is knowledge of how to use LaTeX, a professional typesetting system that aims to streamline the process of writing manuscripts. As opposed to word processors such as Google Docs or Word, you do not need to minutely format your document or determine details such as the margins or the vertical placement of figures. These details are automatically handled by the TeX system, and rather the focus of LaTeX is the content itself. As such, LaTeX takes the form of a dedicated programming language for compiling documents.</p>
+<p>The world’s number one platform on which to write LaTeX is  <a class="reference external" href="https://www.overleaf.com/">https://www.overleaf.com/</a>. It’s state-of-the-art (and more importantly, free) interface is important for collaboration. We suggest messing around with some of the fiducial LaTeX templates on Overleaf before trying to create your own document. We also highly recommend watching the tutorials below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=lgiCpA4zzGU&amp;feature=youtu.be">LaTeX for Students – A Simple Quickstart Guide</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=zqQM66uAig0">How to write a thesis using LaTeX **full tutorial**</a></p>
+</div>
+<section id="choosing-the-right-journal">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Choosing the Right Journal</a><a class="headerlink" href="#choosing-the-right-journal" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#choosing-the-right-journal'"><span>#</span></a></h3>
+<p>The first step in publishing a paper is selecting the appropriate journal for your work. Each journal has a specific focus, audience, and set of requirements. To ensure that your work will be a good fit, make sure that the journal’s focus aligns with your research area and that it reaches your target audience. As a high schooler, you will likely be rejected from submission to one or more journals. Some journals have high rejection rates, so be realistic about your chances of acceptance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://journalfinder.elsevier.com/">Journal Finder (Elsevier)</a></p>
+<p><a class="reference external" href="https://www.scijournal.org/">Sci Journal</a></p>
+</div>
+</section>
+<section id="journal-specific-guidelines">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Journal-Specific Guidelines</a><a class="headerlink" href="#journal-specific-guidelines" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#journal-specific-guidelines'"><span>#</span></a></h3>
+<p>Throughout your literature review, you may have noticed that papers from various journals look different. This is largely because of journal-specific LaTeX guidelines or templates. Often, journals will provide their own LaTeX article styles for you to use and implement. Some may provide different commands to generate figures or citations. When writing your paper, it’s important to write it in the style of the journal you’re hoping to submit to in order to save yourself a headache!</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Let’s look at the journal submission guidelines for MNRAS (Monthly Notices of the Royal Astronomical Society), the largest journal in astronomy (<a class="reference external" href="https://academic.oup.com/mnras/pages/General_Instructions">https://academic.oup.com/mnras/pages/General_Instructions</a>)!</p>
+</div>
+<p>In section 2.1, they state that “For authors preparing their manuscripts using LaTeX, MNRAS has its own LaTeX class files which simulate the appearance of the journal page. Authors are encouraged to use these…” As such, you will need to take the LaTeX format files they provide on their website and drag them into Overleaf for the proper formatting.</p>
+<p>Because this is a journal based in Oxford, they specify in section 6.2 that “Spelling and grammar
+Please use British English spellings – e.g. centre not center, sulphur not sulfur and labelled not labeled. For words ending in -ise/yse or -ize follow this style: use -ise/yse for devise, surprise, comprise, revise, exercise, analyse; use -ize for recognize, criticize, minimize, emphasize, organize, ionize, polarize, parametrize (note the spelling of this word in particular).”</p>
+<p>While these are quite minor formatting guidelines, it’s beneficial to keep them in mind to prevent unnecessary edits.</p>
+</section>
+</section>
+<section id="writing-an-effective-abstract">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Writing an Effective Abstract</a><a class="headerlink" href="#writing-an-effective-abstract" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#writing-an-effective-abstract'"><span>#</span></a></h2>
+<p>The abstract is a crucial component of your paper. It serves as a summary and a first impression for potential readers and reviewers. A well-written abstract can significantly increase the likelihood of your paper being read and cited.</p>
+<p><strong>Structure of an abstract:</strong></p>
+<ul class="simple">
+<li><p>Background (2-3 sentences)</p></li>
+<li><p>Purpose (1 sentence)</p></li>
+<li><p>Methods (2-5 sentences)</p></li>
+<li><p>Results (2-3 sentences)</p></li>
+</ul>
+<p><strong>Tips:</strong></p>
+<ul class="simple">
+<li><p>Keep it concise (usually 150-250 words).</p></li>
+<li><p>Avoid jargon and acronyms.</p></li>
+<li><p>Focus on the most critical aspects of your research.</p></li>
+</ul>
+</section>
+<section id="structuring-a-paper">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Structuring a Paper</a><a class="headerlink" href="#structuring-a-paper" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#structuring-a-paper'"><span>#</span></a></h2>
+<p>Before you start hammering away at your manuscript, it’s a great idea to structure and outline your paper. A conventional scientific paper follows the following format:</p>
+<p><strong>Introduction</strong>: Brief but detailed summary of your literature review, contains concepts and past research necessary to understand and provide context to your paper.</p>
+<p><strong>Data/Observations (Optional)</strong>: This section, which is also optional, is common in fields such as data science or astronomy. For example, if you’ve gotten the data that you will be analyzing through a telescope, it is best to discuss the nature of those observations (time, location, area observed, etc) here. If you are sourcing your data from some large database, you should probably discuss it here.</p>
+<p><strong>Methods</strong>: What did you do in your project? Describe your methods extremely thoroughly, to the point where an outsider who is reading your paper can replicate your process. That is the gold standard.</p>
+<p><strong>Results</strong>: What data did you collect from your data? Do not discuss any interpretations here, but discuss what came from your data and how you analyzed it.</p>
+<p><strong>Discussion</strong>: What does your data mean? How does it relate to the central question asked at the beginning of your project? Does it indicate any particular trends or patterns? What is the wider significance of your research? Discuss all interpretations of your research in this section. Be honest about possible drawbacks and pitfalls in your methodology.</p>
+<p><strong>Conclusion</strong>: Summarize all your findings in this section. Do not just restate your introduction or results section. Provide a brief but concise explanation of your experimental procedure and what came out of it. You can also discuss potential future endeavors in this section.</p>
+<p>Note that the sections described above are just suggested guidelines. Papers will often write a completely separate section based on the content of their research. For example, a paper about physics simulations may write a section called Theoretical prerequisites. Furthermore, each section in your paper will most likely have several subsections, which you can customize however you please.</p>
+</section>
+<section id="extras">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Extras</a><a class="headerlink" href="#extras" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#extras'"><span>#</span></a></h2>
+<p>Figures and tables must be prepared to the guidelines of the journal. Usually, they may give a minimum quality for images or a particular format they want for the table. For these, see the journal-specific guidelines.</p>
+<p>You may also include an appendix for additional data or experiments that should be included but are not necessary to understand the body of the paper and may have otherwise clogged up the manuscript. You should strive to make the code and data for your project open source for other researchers to see and use. While this isn’t required for a lot of journals, it is still good practice and in good faith to do so.</p>
+<p>Finally, you must include references for each idea that is not originally yours. LaTeX has an automatic citation-tracking and bibliography creation system, so citing papers in your text should be fairly trivial. Keep in mind to reference the correct papers for the correct ideas, and try to paraphrase instead of directly quoting from other authors. In your acknowledgements section after your conclusion, you should recognize any software tools, instruments, funding, and external help you had that assisted you in your research.</p>
+</section>
+</section>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<ul>
+<li><a :data-current="activeSection === '#latex'" class="reference internal" href="#latex">LaTeX</a><ul>
+<li><a :data-current="activeSection === '#choosing-the-right-journal'" class="reference internal" href="#choosing-the-right-journal">Choosing the Right Journal</a></li>
+<li><a :data-current="activeSection === '#journal-specific-guidelines'" class="reference internal" href="#journal-specific-guidelines">Journal-Specific Guidelines</a></li>
+</ul>
+</li>
+<li><a :data-current="activeSection === '#writing-an-effective-abstract'" class="reference internal" href="#writing-an-effective-abstract">Writing an Effective Abstract</a></li>
+<li><a :data-current="activeSection === '#structuring-a-paper'" class="reference internal" href="#structuring-a-paper">Structuring a Paper</a></li>
+<li><a :data-current="activeSection === '#extras'" class="reference internal" href="#extras">Extras</a></li>
+</ul>
+</div>
+</aside>
+</main>
+</div>
+</div><footer class="py-6 border-t border-border md:py-0">
+<div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+<div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2024 Youth Research Initiative Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
+</div>
+</div>
+</footer>
+</div>
+<script src="../_static/documentation_options.js?v=5929fcd5"></script>
+<script src="../_static/doctools.js?v=9a2dae69"></script>
+<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+<script defer="defer" src="../_static/theme.js?v=e82a16a3"></script>
+<script src="../_static/design-tabs.js?v=36754332"></script>
+<script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+<script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+=============
+Options for the Future
+=============
+
+**Author**: Ankit Biswas
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   Ethical Data Analysis Guidelines <unit_5/ethics>
+
+
+.. contents:: Table of Contents
+   :depth: 3
+
+
+Crossroads
+==============================
+
+As a student researcher who has finished their research project, you are now at a crossroads. How do you share your findings and discoveries with the world? There are many pathways you can take. The typical route taken by high school researchers is to run the science fair circuit through competitions like the International Science and Engineering Fair (ISEF) and the Junior Science and Humanities Symposium (JSHS). However, many youth researchers are not aware of the other options–publishing, presenting at a conference, or a combination of all of the above. Below, we discuss several common pathways that student researchers take to present their research to the world. In the rest of the pages in this unit, we will discuss these options more in-depth. 
+
+Pathways
+===============
+
+The Fair Circuit
+-----------------
+
+The fair circuit is the most common pathway taken by high school researchers. Submissions for science fairs and science symposiums geared towards pre-college students typically begin late in the fall semester and gear up towards the spring semester. Depending on your performance at these competitions, you may be actively involved in science fairs from November to May, depending on your local ISEF-affiliated fair’s timing as well as the timing of other organizations. Here are some estimated dates for a few of these competitions:
+
+* National STEM Challenge Submissions: September to November
+* ISEF-Affiliated Regional Fairs: Late November to Early April
+* Davidson Fellows Application: Late January to February 14th
+* JSHS Regionals/States: Late January to March
+* JSHS: Early May
+* ISEF: Mid-May
+* National STEM Challenge: April
+* Davidson Fellows Awards: Mid-July
+
+As you can see, preparation for these competitions start immediately after the summer, leading students to ideate and execute a research project over the summer and then start applying to these competitions upon the commencement of their project. However, while the fair circuit is a great way to showcase your research to other students, it is not as effective at getting your research into the academic world, where your work can be cited, critiqued, and used as a jumping pad for fellow professional researchers. 
+
+Publishing
+-------------
+Many students are not aware of the fact that journals can accept the work of undergraduates and high schoolers. Publishing your work can be a difficult process, with many hurdles in the way. Especially for those without a mentor, navigating the publication process by yourself may be daunting. As you submit to a journal, you may even discover that your scientific understanding of the central concepts involved is not sound. You will likely be rejected from your first submission, especially if you submit to a high-impact journal **(Note: DO NOT submit to a high-school focused student journal. These are not recognized and legitimate.)**. However, it is nevertheless one of the best ways to impact the scientific community with your research.
+
+Most journals typically don’t have a “submission cycle,” meaning you can submit your research at any time of the year. However, for students looking to also participate in the fair circuit, there are two main routes. The first route is to publish in the summer before the start of competition season, while the second is to publish the summer after completing a fair circuit. Both have their drawbacks and benefits. 
+
+With the first route, you can be assured of the soundness and veracity of your research before you present in any science competitions, which can make you more confident in presenting your findings. However, this is an extremely tight schedule, given that the journey from submission to acceptance for most journals can typically take several months. This “rush” will likely degrade the quality of your investigation. With the second route, you can be more confident when publishing and you will likely be able to refine your research based on the feedback you received at these competitions. However, with this route, you run the risk of making false claims or misguided statements at these research competitions. Personally, we recommend taking the second route. While it may be longer, it will definitely increase the quality of your research. 
+
+Conferences
+----------
+High schools typically neglect one last element of the research community– conferences. These conferences are a great way to not only showcase your research to people in your field, but make connections and lasting friendships. They are an opportunity to have your work critiques and a valuable place to receive feedback. Many conferences branded as “undergraduate” typically accept high school submissions or submissions from students affiliated with a university. While we cannot provide a comprehensive list of high schooler-allowing conferences due to constantly-changing rules year by year, we strongly advising checking your local universities and conference catalogs such as the one at https://www.papercrowd.com/explore. 
