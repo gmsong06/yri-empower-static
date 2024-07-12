@@ -1,0 +1,43 @@
+/* This file intentionally left blank. */
+.dark body {
+    background-color: #121212 !important;
+}
+
+.dark .bg-background\/95  {
+    background-color: #121212;
+}
+
+img {
+    height: 100%;
+    width: 5%;
+}
+
+.hint {
+    background-color: rgba(72, 56, 142, 0.15) !important;
+    border-color: rgb(78, 59, 160);
+}
+
+.dark .border-border {
+    border-color: rgb(26, 23, 43);
+}
+
+#search-input:hover,
+#search-input:focus {
+    background-color: rgb(78, 59, 160, 0.15) !important;
+    border-color: rgb(78, 59, 160);
+}
+
+#left-sidebar a {
+    transition: 0.3s !important;
+    text-decoration: none !important;
+}
+
+#left-sidebar a.current {
+    background-color: rgba(72, 56, 142, 0.15) !important;
+}
+
+
+#left-sidebar a:hover {
+    color: #c9c3cf;
+    cursor: pointer;
+}

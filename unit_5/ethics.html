@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Ethical Data Analysis Guidelines | Project Empower  documentation</title>
+<meta content="Ethical Data Analysis Guidelines | Project Empower  documentation" property="og:title"/>
+<meta content="Ethical Data Analysis Guidelines | Project Empower  documentation" name="twitter:title"/>
+<link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=ecdfb4fc" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/custom.css?v=b32d188c" rel="stylesheet" type="text/css"/>
+<link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
+<link href="../_static/yri_icon_dark.png" rel="icon"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="statistical_analysis.html" rel="next" title="Statistical Analysis"/>
+<link href="data_analysis_tools.html" rel="prev" title="Data Analysis Tools"/>
+<script>
+    <!-- Prevent Flash of wrong theme -->
+      const userPreference = localStorage.getItem('darkMode');
+      let mode;
+      if (userPreference === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        mode = 'dark';
+        document.documentElement.classList.add('dark');
+      } else {
+        mode = 'light';
+      }
+      if (!userPreference) {localStorage.setItem('darkMode', mode)}
+    </script>
+</head>
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
+<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
+      Skip to content
+    </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
+<div class="hidden mr-4 md:flex">
+<a class="flex items-center mr-6" href="../index.html">
+<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/yri_icon_dark.png" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Project Empower  documentation</span>
+</a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
+<svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
+</svg>
+<span class="sr-only">Toggle navigation menu</span>
+</button>
+<div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
+<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="../search.html" class="relative flex items-center group" id="searchbox" method="get">
+<input aria-label="Search the docs" class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" id="search-input" name="q" placeholder="Search ..." type="search" x-ref="search"/>
+<kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
+<span class="text-xs">⌘</span>
+    K
+  </kbd>
+</form>
+</div>
+<nav class="flex items-center space-x-1">
+<button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'" aria-label="Color theme switcher" class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button">
+<svg class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z"></path>
+</svg>
+<svg class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z"></path>
+</svg>
+</button>
+</nav>
+</div>
+</div>
+</header>
+<div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
+<a class="!justify-start text-sm md:!hidden bg-background" href="../index.html">
+<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/yri_icon_dark.png" width="16"/><span class="font-bold text-clip whitespace-nowrap">Project Empower  documentation</span>
+</a>
+<div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
+<div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/invisible_stars.html">Searching for Invisible Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/sritej.html">Sritej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/microbiological_wars.html">Microbiological Wars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/oncology.html">Oncology: A Glimmer of Hope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/smelling_cancer.html">Smelling Cancer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 5</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro_to_data_analysis.html">An Introduction to Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_tools.html">Data Analysis Tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ethical Data Analysis Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical_analysis.html">Statistical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpret_results.html">Interpreting Results in Relation to Project</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<button @click="showSidebar = false" class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100" type="button">
+<svg class="h-4 w-4" fill="currentColor" height="24" stroke="none" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z"></path>
+</svg>
+</button>
+</aside>
+<main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+<div class="w-full min-w-0 mx-auto">
+<nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
+<a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../index.html">
+<span class="hidden md:inline">Project Empower  documentation</span>
+<svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
+</svg>
+</a>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Ethical Data Analysis Guidelines</span>
+</nav>
+<div id="content" role="main">
+<section id="ethical-data-analysis-guidelines">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">Ethical Data Analysis Guidelines</a><a class="headerlink" href="#ethical-data-analysis-guidelines" title="Link to this heading"><span>#</span></a></h1>
+<p><strong>Author</strong>: Karan Sadiora and Felix Ma</p>
+
+
+
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ethical-data-analysis-guidelines" id="id1">Ethical Data Analysis Guidelines</a></p>
+<ul>
+<li><p><a class="reference internal" href="#importance-of-ethics-in-research" id="id2">Importance of Ethics in Research</a></p></li>
+<li><p><a class="reference internal" href="#methodology-and-analysis-transparency" id="id3">Methodology and Analysis Transparency</a></p></li>
+<li><p><a class="reference internal" href="#types-of-unethical-practices" id="id4">Types of Unethical Practices</a></p>
+<ul>
+<li><p><a class="reference internal" href="#data-omission-and-manipulation" id="id5">Data Omission and Manipulation</a></p></li>
+<li><p><a class="reference internal" href="#data-fabrication" id="id6">Data Fabrication</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#major-controversies" id="id7">Major Controversies</a></p>
+<ul>
+<li><p><a class="reference internal" href="#in-student-research" id="id8">In Student Research</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>As part of the scientific community, all research is put into a pool of information that other scientists use to start their projects exploring the natural world. Because of this, it is essential that each piece of information available in various journals and other scientific resources is accurate and the product of the scientific method. As an aspiring researcher yourself, it is your responsibility to ensure the veracity and accuracy of your data.</p>
+<a class="reference internal image-reference" href="../_images/ethics_intro.jpg"><img alt="../_images/ethics_intro.jpg" class="align-center" src="../_images/ethics_intro.jpg" style="width: 80%;"/>
+</a>
+<section id="importance-of-ethics-in-research">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Importance of Ethics in Research</a><a class="headerlink" href="#importance-of-ethics-in-research" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#importance-of-ethics-in-research'"><span>#</span></a></h2>
+<p>In some cases, researchers may be dishonest with their data, leading to data manipulation, p-hacking, fabrication, and more, just so that their results seem significant and paper seems to have a positive impact on the community. However, this causes subsequent research based on the previous paper to be invalidated due to the incorrectness of the results. As you can imagine, if this goes on for a long time, years and years of research can be declared invalid just because of a piece of false information. In addition to the great setback in science, if discovered, your paper will be taken down from every journal, and you will almost certainly lose every opportunity to find another opportunity to conduct research. Due to this endless chain reaction that may occur, as stated before, it’s essential that you keep integrity and honestly a major value while conducting research, and sharing honest results.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A professor from a distinguished university is conducting cancer research. He comes up with a hypothesis that a newly discovered drug, that the professor himself invented, would cause malignant tumors to become benign, and allow them to be surgically removed safely. He ran some tests on a few human subjects and found that the pill worked on 3 out of 10 of the subjects. Because the pill worked on at least 1 individual, he decided to manipulate his data to suggest that the pill worked on every individual. Days later, this new discovery spread worldwide and the professor’s name was widespread. Different researchers also started using his new drugs as a medium for their research, and created supplementary medicines to be used along with it. However, when the treatment started being used, problems were discovered. The drug started to cause tumors to become even larger, and the supplementary medicines based off the original pill were also harmful, due to the false assumption that the initial pill was working. This caused uproar in the world, when society thought that cancer would no longer be an issue. Cancer research was offset by many months, and the professor was forced to leave the prestigious university, never finding a job in academia again.</p>
+</div>
+</section>
+<section id="methodology-and-analysis-transparency">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Methodology and Analysis Transparency</a><a class="headerlink" href="#methodology-and-analysis-transparency" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#methodology-and-analysis-transparency'"><span>#</span></a></h2>
+<p>Sometimes, readers may have a different interpretation of the data analysis done in a specific research paper. Although this may not be intentional, it can still cause the research to be misinterpreted and lead to future problems in the same field. The best way to minimize any misinterpretation in your results is to be explicit and direct in your methodology and data analysis sections. You need to be specific with the methods of analysis you use, how you as a researcher interpret these findings, and if the interpretation would be scientifically acceptable. To do this, you would include information about the type of test that you are carrying out, what your hypotheses mean in relation to significance, and other results that should be included in your paper.</p>
+<a class="reference internal image-reference" href="../_images/methodology_img.jpg"><img alt="../_images/methodology_img.jpg" class="align-center" src="../_images/methodology_img.jpg" style="width: 80%;"/>
+</a>
+</section>
+<section id="types-of-unethical-practices">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Types of Unethical Practices</a><a class="headerlink" href="#types-of-unethical-practices" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#types-of-unethical-practices'"><span>#</span></a></h2>
+<p>There are many ways in which scientific data can be manipulated in a way that can be considered “unethical,” and certainly different people draw the line at various places. However, it is important to have a holistic understanding of the behaviors that are commonly recognized as unethical. Beginner researchers without a good understanding of research ethics sometimes unintentionally engage in behavior that could inadvertently jeopardize the integrity of their research as a whole, even if they never had the intent to exercise unethical practices. Therefore, when starting your research journey, it is especially important to be conscious of whether the way you assess your data falls outside of the ethical realm.</p>
+<section id="data-omission-and-manipulation">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Data Omission and Manipulation</a><a class="headerlink" href="#data-omission-and-manipulation" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#data-omission-and-manipulation'"><span>#</span></a></h3>
+<p>The primary essence of scientific research is to find answers to challenging questions that eventually will contribute to the advancement of the respective fields. As such, almost all the time, there are more “negative” than “positive” data points during the journey of a research project. However, beginners often struggle with these negative and positive data points. Often, researchers are so passionate about their scientific hypotheses and are desperate to prove them, or at least produce some meaningful result. Therefore, data that doesn’t support their thinking, “negative” data, is often ignored or downplayed. On the other hand, any pieces of data that could offer some hope in supporting their theories, “positive data,” tends to be over-amplified. The result of this subtle push and pullback is that during the final presentation of the data in a paper, negative data is frequently left out or pushed into the background, while positive data is “optimized” to show the “best quality.” However, in science, negative results are equally, if not more valuable than positive results, and these tempting yet harmful behaviors often lead to unfortunate outcomes for young, energetic researchers. Experts in the field are frequently able to easily spot data omission and manipulation, and the researchers, motivated mostly by passion, end up being labeled as unethical researchers, and their reputations tarnished.</p>
+<p>A simple yet impactful way that a researcher can avoid accidentally omitting or manipulating negative data points is to force themselves to critically review data in its totality. If possible, talk to yourself in the role of an independent reviewer rather than a scientist; ask yourself “mean” questions that are intended to expose flaws in your data reporting. You can also present your data and explain your rationales behind how you are analyzing and handling the data to a third party. Many scientists find that explaining the reasoning behind their data handling helps to ensure a good chance of unbiased and proper analysis.</p>
+</section>
+<section id="data-fabrication">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Data Fabrication</a><a class="headerlink" href="#data-fabrication" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#data-fabrication'"><span>#</span></a></h3>
+<p>All scientists, and all humans make mistakes. Science is imperfect, and advancement is rarely a straight line, often taking twists and turns with very little progress. While frustrating as it can be, data fabrication is a much more serious ethical issue that should never be considered by any researcher. Unlike data omission and manipulation, data fabrication can never be played off for any reason outside of fulfilling a personal agenda not linked in any way to authentic science. Changing numerical values of experimental results, adding or removing contents of a figure, and outrightly false detailing of experimental procedures are among the many ways that data fabrication can manifest itself. Such behaviors are a total deviation from the fundamental guidance of being a true scientific researcher: good data or bad data, it is the primary source of truth and should never be changed, and those who do so should be dealt with serious ramifications.</p>
+<p>With the advancement of digital technologies over the last 20 years, data fabrication has unfortunately become significantly easier to executive without obvious traces. More than ever, this brings a real ethical challenge to young researchers often under tremendous pressure to turn out results to secure funding, meet a timeline, or many other reasons. Despite this, one should always remind themselves- while it may seem like an easy way out, an act like data fabrication is wholly unethical, against the fundamental rules of scientific research, and will ruin careers and destroy reputations sooner rather than later.</p>
+<div class="line-block">
+<div class="line"><br/></div>
+</div>
+<div class="quizdown"> ---
+ primary_color: '#543bbf'
+ secondary_color: white
+ text_color: black
+ shuffle_questions: false
+ ---
+
+## Which of the following should you NOT do in your research paper?
+
+- [ ] Include you chose a specific method
+- [x] Choose a method that supports your data the most
+- [ ] Provide interpretation for your results
+- [ ] Use an accepted significance level for your experiment
+
+## Which of the following would violate research ethics in data analysis?
+
+ - [ ] Conducting data cleaning to remove outliers and errors
+ - [ ] Using statistical methods to accurately represent the dataset
+ - [ ] Disclosing conflicts of interest related to the data analysis process
+ - [x] Manipulating data to fit preconceived hypotheses
+
+
+ ## Which is an example of data fabrication?
+
+ - [x] Creating fake values for graphs and charts
+ - [ ] Not including certain data values in a figure
+ - [ ] Over-emphasizing a positive result
+ - [ ] Intentionally drawing incorrect conclusions from your data</div></section>
+</section>
+<section id="major-controversies">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Major Controversies</a><a class="headerlink" href="#major-controversies" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#major-controversies'"><span>#</span></a></h2>
+<p>Despite the rigor and depth to which modern scientific research is scrutinized, incidents of unethical research practices still do occur, and sometimes they can result in high-profile scandals that tarnish the perpetrator’s reputation, career, and livelihood. Evidence of such practices can emerge years after the alleged acts were committed, and while papers can be retracted and revised, trust is much harder to restore.</p>
+<section id="in-student-research">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">In Student Research</a><a class="headerlink" href="#in-student-research" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#in-student-research'"><span>#</span></a></h3>
+<p>In competitions such as ISEF or JSHS that offer millions of dollars in total prize money and great boosts to student college applications, there is great incentive for scientific fraud and misconduct. Indeed, there have been few cases of misconduct that have been caught, but due to the relatively low rigor of scientific examination at these competitions in comparison to groups of SMEs (subject matter experts) at institutions like journals, the fraction of misconduct is likely higher. However, there are consequences for those that are caught, and a simple Google search will reveal cases of such occurrences in student research. These students are often ostracized and called out in front of the entire student research community, if not in front of a wider audience. Scientific misconduct can not only cause drastic effects in works that cite and rely on your research, but it can also result in devastating personal consequences for the culprit.</p>
+</section>
+</section>
+</section>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<ul>
+<li><a :data-current="activeSection === '#importance-of-ethics-in-research'" class="reference internal" href="#importance-of-ethics-in-research">Importance of Ethics in Research</a></li>
+<li><a :data-current="activeSection === '#methodology-and-analysis-transparency'" class="reference internal" href="#methodology-and-analysis-transparency">Methodology and Analysis Transparency</a></li>
+<li><a :data-current="activeSection === '#types-of-unethical-practices'" class="reference internal" href="#types-of-unethical-practices">Types of Unethical Practices</a><ul>
+<li><a :data-current="activeSection === '#data-omission-and-manipulation'" class="reference internal" href="#data-omission-and-manipulation">Data Omission and Manipulation</a></li>
+<li><a :data-current="activeSection === '#data-fabrication'" class="reference internal" href="#data-fabrication">Data Fabrication</a></li>
+</ul>
+</li>
+<li><a :data-current="activeSection === '#major-controversies'" class="reference internal" href="#major-controversies">Major Controversies</a><ul>
+<li><a :data-current="activeSection === '#in-student-research'" class="reference internal" href="#in-student-research">In Student Research</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</aside>
+</main>
+</div>
+</div><footer class="py-6 border-t border-border md:py-0">
+<div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+<div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2024 Youth Research Initiative Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
+</div>
+</div>
+</footer>
+</div>
+<script src="../_static/documentation_options.js?v=5929fcd5"></script>
+<script src="../_static/doctools.js?v=9a2dae69"></script>
+<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+<script defer="defer" src="../_static/theme.js?v=e82a16a3"></script>
+<script src="../_static/design-tabs.js?v=36754332"></script>
+<script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+<script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
+</body>
+</html>

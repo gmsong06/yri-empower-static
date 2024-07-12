@@ -1,0 +1,49 @@
+============
+Oncology: A Glimmer of Hope
+============
+
+**Author**: Sanjan Sarang
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+Lung cancer continues to be a looming issue in the realm of oncology, claiming countless lives across the globe. Early detection still remains an issue and the quest to identify early-stage biomarkers has become an increasing priority among oncological researchers. My project sought to contribute to this ongoing pursuit by investigating novel biomarkers that could potentially revolutionize cancer identification.
+
+My primary objective was to identify and validate a potential biomarker signature by using a multifaceted approach. I leveraged molecular biology techniques and bioinformatic analysis to unravel a molecular signature of lung cancer in its earliest stages.
+
+My methodology had two main aspects: the wet-lab experimentation and computational analyses. Initially, I performed a comprehensive literature review to identify numerous candidate biomarkers implicated in lung cancer pathogenesis. Subsequently, I searched for a lab to conduct my research. Firstly, bioinformatic analyses using numerous techniques elucidated the signatures of candidate biomarkers using previous data. In the laboratory, I employed the use of immunofluorescence assays to evaluate candidate biomarker protein expression in cultured A549 cells. From these two phases of my methodology, I conducted a thorough statistical analysis to evaluate the significance of the differential expression of numerous proteins in cancer and non-cancer lung cells from both bioinformatic and laboratory analyses. 
+
+Throughout this process I faced numerous challenges be it from culturing cells or not being able to find data to analyze in my bioinformatic analyses. One significant hurdle was finding a laboratory to conduct my research in, luckily with time, I was able to find a professor who was willing to collaborate with me on this research journey. Additionally, the data analysis posed its own set of challenges in developing a custom computational pipeline to address my research questions. The dynamic nature of cancer biology required constant refinement of the methodologies to adapt to emerging insights. Despite these issues, the unwavering commitment to a passionate scientific inquiry propelled me to surmount each and every obstacle.
+
+In pursuit of unraveling the mysteries of lung cancer, I embarked on a personally transformative journey that showed the power of commitment to an arduous process. Throughout these endeavors and presenting them here, I hope to inspire future generations of researchers to embark on their own odyssey of discovery, fueled by a belief in the power of science!

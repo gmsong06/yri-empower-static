@@ -1,0 +1,50 @@
+============
+Microbiological Wars
+============
+
+**Author**: Karan Sadiora
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+Around November 2023, I conducted research at a laboratory studying the effects of antibacterial resistance on cell line cultures and determining which genes encoded for a greater amount of resistance compared to others. I chose to conduct this type of research because I have always been interested in biochemistry and biomedicine. Using cell cultures to study antibacterial resistance has a real application in the medical field, being able to translate into clinical treatments and drug development with future research. 
+
+To do this research, I first performed a literature review and became familiar with many different topics in the field of cellular biology. Through this, I came up with the idea of seeing if a certain gene contributed to antibacterial resistance. After creating a research proposal and planning out most of my project, I reached out to a professor of cellular biology at my local university and sent them my proposal. After giving some feedback to my proposal and discussing ways to improve the project, I went into the lab at the university over winter break every day for 2 weeks and completed all the wet lab work. When all the wet lab work was finished, the only thing left was conducting data analysis and writing up background information to the project along with explaining the methodology in a way that can be followed by those who wish to build off my research. Lastly, I reached out and submitted my finalized paper to a well-known research journal and after a few weeks of peer review from others, it was finally published in the journal for the latest edition. 
+
+Now that I’ve given an overview of the basic process of my research, I’ll dive a little deeper into the specific methodology of my project. Starting off, I looked into some cell types that are useful and easy to test the growth of future generations with, which led me to choose a final type of bacteria for my experiment. After this, I looked into how DNA transformation allows the uptake of genetic information into a cell from its environment, and then planned a few independent variable levels of DNA solutions to test with the target bacteria. Lasty, I needed a type of virus to use to test antibacterial properties with, and decided upon a well niche virus that had many gaps in research. To put it all together, again, I created a proposal and contacted a professor. 
+
+I was able to get a position at the lab, however this came with many challenges. First, I had to change my plans to use the substances only available in the lab, which didn't include some of my virus and bacteria choices. However, this made sure that the project was realistic and used what was given to its fullest extent. In addition, some of the quantitative machinery that I had envisioned using was not available at the lab either, and to measure antibacterial resistance, I had to find a different measurable variable. Lastly, all the materials and resources had to be planned out in advance. If I started conducting the research and forgot to order a certain material, there was a very low possibility that the material was readily available, and I would have to postpone the experiment to another day. However, through all these obstacles and difficulties, I will finally be able to complete my research and get my desired results from the study. 
+
+Learning to conduct an efficient experiment with legitimate results is an essential part of research, and paired with the skills to review literature and analyze your data, you end up with the expertise to create an amazing research paper on any subject that interests you. In addition, these results can be applied to the real world and help solve global issues which require a novel solution. The whole point of a paper is to communicate and explain what you did, why you did it, and what it means, and if others understand this rationale of your views, they can apply it not only to their own research, but also to their own lives and the lives of others as well. 
