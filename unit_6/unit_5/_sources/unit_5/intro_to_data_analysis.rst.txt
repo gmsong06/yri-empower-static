@@ -1,0 +1,81 @@
+=============
+An Introduction to Data Analysis
+=============
+
+**Author**: Ankit Biswas
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+
+
+.. contents:: Table of Contents
+   :depth: 3
+
+Your experiments have yielded an abundance of data–rows and columns of numbers and data points. But what does it all mean? To derive meaningful conclusions from our methodology, we take the observed data and analyze it for interesting trends or properties that may answer the original research question. In this unit, we will cover several tools and methods to perform data analysis and which approaches may be the most suitable to examine your data. 
+
+The Steps of Data Analysis
+========
+
+Each experiment is unique. You may be an engineer studying the load-bearing properties of bridges, or an astrophysicist searching for distant biosignatures. Whatever the case, data analysis follows a number of key steps, as will be discussed in detail later in this module. Below is a general outline for the data analysis process.
+
+Data Cleaning
+-----------
+
+Maybe you entered a cell in Excel wrong. Maybe your data labels aren’t standardized. Whenever there are incorrect or erroneous observations in your data, you should take measures to clean them (Note that erroneous observations are not simply those that don’t conform to your hypothesis; see Data Fraud). Data cleaning ensures that the noise and error present within your data is solely from experimental variation rather than from external error. There are several appropriate ways to clean your data, such as:
+
+1. **Removing Duplicate Observations**: When merging datasets or taking in data from multiple sources, you may get duplicate entries. Filtering these may ensure better fits and cleaner data. NOTE that you should only remove duplicate observations if they are genuinely duplicate observations rather than the same parameters being observed multiple times. 
+2. **Fixing Labeling Conventions**: When analyzing data, especially of a categorical nature, you should strive to have standardized labels to prevent data loss or miss-classification.
+3. **Removing Outliers**: If a data point is the result of external error, such as improper data entry or sample contamination, you should remove that point for better interpretation. NOTE that you should only do this if you have a proper reason to do so and should not just remove a data point if it doesn’t fit your observations.
+4. **Handling Missing Data**: If particular observations have null or missing values, you can choose to drop them from your data altogether or interpolate based on surrounding data points, though the latter can create a loss in data integrity.
+
+.. tip::
+
+    A researcher measuring the auditory properties of dropping different objects in a soundproof environment removes a sound data point that was artificially heightened due to a passing truck on the road outside of the test facility.
+
+Data Examination
+------------
+
+Once your data is cleaned, you need to examine it for various trends and relationships, especially as they pertain to your hypothesis and original research question. These examinations can range from qualitative/visual analysis to statistical tests to determine the significance of your data. These techniques are discussed in further detail throughout the section.
+
+.. tip::
+
+    A biologist observes the relationship between cell size and concentration of a particular protein and formulates a line of best fit to describe the equation.
+
+.. tip::
+
+    An astronomer observes the clustering of stars in a galaxy towards a certain luminosity through plotting tools.
+
+Data Interpretation
+------------
+
+But once again, what does it all mean? At this stage of the research process, you should be prepared to draw conclusions from your data. Compare the trends and heuristics you observe in your current data to the predicted statistics, either from theory or from previous experiments. Ask yourself the following questions:
+
+1. How do my results differ from previous results?
+2. Why do they differ or agree with the expected results?
+3. How do my observations compare to my hypothesis?
+4. What are the wider implications of my data?
+
+A key element of good research is to draw adequate interpretations from your observations without being overly reductive or speculative. Keep in mind the sample you’re observing from and to what you can generalize. This is discussed further in the Drawing Interpretations page.

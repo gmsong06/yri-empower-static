@@ -1,0 +1,90 @@
+============
+The Tools for Success
+============
+
+**Author**: Ankit Biswas
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+Before starting your research process, it’s good to know which tools are at your disposal. Leveraging software or mechanisms created by previous researchers can provide a platform from which you can leap off and improve. On the more physical side, knowing which specialized equipment you can get access to in order to perform your experiments can greatly help you effectively conduct a research project. By knowing the tools you already have at your disposal, you can save yourself a lot of time and headaches. 
+
+Computing
+------------
+
+Software
+=========
+
+Often, your research may require specialized analysis procedures that are specialized to your field. Rather than reinventing the wheel, it is much simpler to build off of previous work, or as Isaac Newton said, to “stand on the shoulders of giants” (given proper attribution, of course).
+
+There are many places where you can find such software repositories. In most cases, a quick search on GitHub will probably reveal codebases that are related to your research problem. If not GitHub, you can also search for papers in your topic in Papers With Code, where you can access millions of papers with linked software databases. 
+
+If, however, you are looking for software, data, or code tied to a particular paper, there are several other pathways you can take. The first, of course, as aforementioned, is to search up the paper in software repositories such as Papers With Code. Often, journals will require a “data availability” policy, in which case the information you’re looking for may be readily linked to on the journal’s website. If you still cannot find this information, another tip is to take a look at the credited authors and try to find their GitHub profile(s). Most of your needs/queries will be answered in these preceding steps.
+
+.. note::
+    https://github.com/
+
+.. note::
+    https://paperswithcode.com/
+
+Finally, if you have still not found the software/code you seek to analyze, you can reach out to the authors themselves! A kindly worded email like the one provided below can go a long way. Remember, researchers are usually willing to answer questions about their work, so don’t feel scared to reach out! 
+
+.. tip::
+    Dear Dr. [researcher’s name], 
+
+    I am [name], a [position] conducting research on [topic]. As such, I was wondering if we could take a look at your code for [paper]. Please let me know if you can send it.
+
+    |
+
+    Thanks, 
+
+    [name]
+
+inally, remember always to properly attribute any software you used in your project!
+
+Computing Resources
+=====================
+
+Your project may require a large amount of compute power in order to perform large-scale tasks. Most likely, your laptop or PC will not possess enough resources to carry out these tasks. In such a scenario, you will likely have to ship and deploy your code to a large computing cluster that can rapidly and efficiently carry out your code. 
+
+Many cloud services (AWS, Oracle) offer free cloud computing tiers with limited credits per month that can allow you to execute large batches of operations over the cloud with the only requirement on your end being an internet connection. However, if you want more flexibility in the resources that you’re able to access, it is highly advised that you try to gain access to a computing cluster run by a university or local organization. While in these cases you will likely experience queue times due to other users also utilizing the cluster, you will have much more freedom in requesting resources for your computings sessions. 
+
+Gaining access to a university cluster, however, is quite difficult. If you already work in a lab at a university, you can usually send a request upstream to get a computing account. For external individuals, it is significantly more difficult to obtain a computing account, but you can send a detailed email talking about your research to the computing department and hope for the best.
+
+Equipment
+------------------
+Sometimes, you may need specialized lab equipment for your project. For most medical-related projects, your local hospital will probably have this equipment. You can often send an email to these hospitals asking to borrow/rent the equipment that you need for your research. Keep in mind that a lot of these hospitals may be overloaded and may not have spare equipment to lend to you, even for part-time use, so it is crucial to be kind and understanding in your interactions. If the specialized equipment you require is something that’s only available at specific institutions, you can always reach out to them inquiring on using them. For a lot of things, such as telescopes in astronomy research, you often have to submit a proposal to use that piece of equipment and wait for approval. Remember to be patient and reach out to as many institutions as possible. 

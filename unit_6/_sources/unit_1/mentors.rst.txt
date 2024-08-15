@@ -1,0 +1,57 @@
+============
+Mentors
+============
+
+**Author**: Ankit Biswas, Sritej Padmanabhan
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+Mentors are people who guide us in our research journey but can also become people to help us throughout our lives. A common question revolves around whether we need a mentor or not to do quality research. Here, we will debunk that question and help you figure out whether you need one or don’t. To get a mentor, read our cold email guide: [link to cold email guide]
+
+Do I need a mentor?
+--------------------
+**Who are research mentors?** A research mentor is typically a professor in the field or subfield you are interested in. Research mentors will be experts in their field and are there to guide you through your own research and sometimes let you join their project.
+
+Ask yourself the following questions to assess whether you need a research mentor or not?
+
+1. Do I have the time to make an entire project myself or do I want to join another professor's project instead? This question is a major one that lets us understand what we desire from this process. Working with a mentor and contributing to one of their projects can be a great experience and if that is what you want, then a mentor is what you need. Independent research is also a joy so either way, you will not go wrong.
+2. Is my project feasible without a mentor? Can this project be done without external university resources and do I need a mentor to guide me through using them and accessing them. If so, a mentor is needed.
+
+We believe that no matter what, a mentor is always great. While you do not need a mentor and many have been successful without out, having a mentor can make the process a lot more rewarding as they can guide you and give you advice that you won't find anywhere else. If you do not have the time to cold email and get one, no worries but take time to assess your project’s feasibility without one and make any modifications to the idea necessary.
+
+**Short answer**: Not necessary to have a mentor but highly rewarding and suggested.

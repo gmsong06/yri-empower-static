@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Finding Your Passions and Interests | Project Empower  documentation</title>
+<meta content="Finding Your Passions and Interests | Project Empower  documentation" property="og:title"/>
+<meta content="Finding Your Passions and Interests | Project Empower  documentation" name="twitter:title"/>
+<link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=ecdfb4fc" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/custom.css?v=b32d188c" rel="stylesheet" type="text/css"/>
+<link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
+<link href="../_static/yri_icon_dark.png" rel="icon"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="optimal_subfield.html" rel="next" title="Finding Your Optimal Subfield"/>
+<link href="intro_to_steam_research.html" rel="prev" title="Introduction to STEAM Research"/>
+<script>
+    <!-- Prevent Flash of wrong theme -->
+      const userPreference = localStorage.getItem('darkMode');
+      let mode;
+      if (userPreference === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        mode = 'dark';
+        document.documentElement.classList.add('dark');
+      } else {
+        mode = 'light';
+      }
+      if (!userPreference) {localStorage.setItem('darkMode', mode)}
+    </script>
+</head>
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
+<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
+      Skip to content
+    </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
+<div class="hidden mr-4 md:flex">
+<a class="flex items-center mr-6" href="../index.html">
+<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/yri_icon_dark.png" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Project Empower  documentation</span>
+</a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
+<svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
+</svg>
+<span class="sr-only">Toggle navigation menu</span>
+</button>
+<div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
+<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="../search.html" class="relative flex items-center group" id="searchbox" method="get">
+<input aria-label="Search the docs" class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" id="search-input" name="q" placeholder="Search ..." type="search" x-ref="search"/>
+<kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
+<span class="text-xs">⌘</span>
+    K
+  </kbd>
+</form>
+</div>
+<nav class="flex items-center space-x-1">
+<button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'" aria-label="Color theme switcher" class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button">
+<svg class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z"></path>
+</svg>
+<svg class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z"></path>
+</svg>
+</button>
+</nav>
+</div>
+</div>
+</header>
+<div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
+<a class="!justify-start text-sm md:!hidden bg-background" href="../index.html">
+<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/yri_icon_dark.png" width="16"/><span class="font-bold text-clip whitespace-nowrap">Project Empower  documentation</span>
+</a>
+<div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
+<div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
+<p class="caption" role="heading"><span class="caption-text">Unit 1</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro_to_steam_research.html">Introduction to STEAM Research</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Finding Your Passions and Interests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimal_subfield.html">Finding Your Optimal Subfield</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prelim_lit_review.html">How to Write and Conduct a Proper Preliminary Literature Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="find_question.html">Finding the Right Question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mentors.html">Mentors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unit_2/lit_review.html">The Literature Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_2/learn_gain.html">Learning the Minimum to Gain the Maximum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_2/feasibility.html">Exploring the Feasibility of the Research Question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_2/redefine_project.html">Redefining Your Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_2/lit_review_checklist.html">Research Question and Literature Review Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_2/research_rationale.html">Forming a Research Rationale</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unit_3/choosing_project.html">Choosing a Type of Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_3/tools_for_success.html">The Tools for Success</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_3/feasible_timeline.html">Constructing A Feasible Timeline For Your Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_3/stop_checklist.html">STOP. Checklist.</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/invisible_stars.html">Searching for Invisible Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/sritej.html">Sritej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/microbiological_wars.html">Microbiological Wars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/oncology.html">Oncology: A Glimmer of Hope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_4/smelling_cancer.html">Smelling Cancer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 5</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/intro_to_data_analysis.html">An Introduction to Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/data_analysis_tools.html">Data Analysis Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/ethics.html">Ethical Data Analysis Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/statistical_analysis.html">Statistical Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/interpret_results.html">Interpreting Results in Relation to Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_5/wider_significance.html">Understanding the Wider Significance of Your Findings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unit 6</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unit_6/options_for_future.html">Options for the Future</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_6/writing_academic_paper.html">Writing an Academic Paper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_6/publishing_research.html">Publishing Scientific Papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_6/creating_research_poster.html">Creating a Research Poster</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<button @click="showSidebar = false" class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100" type="button">
+<svg class="h-4 w-4" fill="currentColor" height="24" stroke="none" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z"></path>
+</svg>
+</button>
+</aside>
+<main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+<div class="w-full min-w-0 mx-auto">
+<nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
+<a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../index.html">
+<span class="hidden md:inline">Project Empower  documentation</span>
+<svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
+</svg>
+</a>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Finding Your Passions and Interests</span>
+</nav>
+<div id="content" role="main">
+<section id="finding-your-passions-and-interests">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">Finding Your Passions and Interests</a><a class="headerlink" href="#finding-your-passions-and-interests" title="Link to this heading"><span>#</span></a></h1>
+<p><strong>Author</strong>: Portia Wang, Cecily May, Sarah Osman</p>
+
+
+
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#finding-your-passions-and-interests" id="id1">Finding Your Passions and Interests</a></p>
+<ul>
+<li><p><a class="reference internal" href="#introduction" id="id2">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#understanding-your-passions-and-interests" id="id3">Understanding Your Passions and Interests</a></p></li>
+<li><p><a class="reference internal" href="#self-reflection-and-exploration" id="id4">Self-Reflection and Exploration</a></p></li>
+<li><p><a class="reference internal" href="#our-favorite-resources-to-explore-topics" id="id5">Our Favorite Resources to Explore Topics!</a></p></li>
+<li><p><a class="reference internal" href="#choosing-a-path" id="id6">Choosing a Path</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="introduction">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#introduction'"><span>#</span></a></h2>
+<p>Finding an idea for a research project is one of the most difficult and tedious parts of the process. A lot of the time, you have no idea what you want to pursue, or what you think you would even enjoy researching. In this case, it’s always best to start off broad and work your way down to be more specific, slowly finding your niche. In this section, we’ll explore how you can begin your research process by looking into larger areas of science, and following whatever piques your interest.</p>
+</section>
+<section id="understanding-your-passions-and-interests">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Understanding Your Passions and Interests</a><a class="headerlink" href="#understanding-your-passions-and-interests" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#understanding-your-passions-and-interests'"><span>#</span></a></h2>
+<p>Discovering your passions and interests in STEAM research is a crucial first step towards embarking on a fulfilling academic journey. It involves exploring the vast landscape of science, technology, engineering, mathematics, and arts to identify where your interests lie. Think about the moments that have captivated you, whether it’s experimenting with gadgets, falling in love with the intricacies of nature, or solving puzzles that challenge your mind. These experiences hold the key to finding.</p>
+<a class="reference internal image-reference" href="../_images/passions_and_interests.png"><img alt="../_images/passions_and_interests.png" class="align-center" src="../_images/passions_and_interests.png" style="width: 80%;"/>
+</a>
+</section>
+<section id="self-reflection-and-exploration">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Self-Reflection and Exploration</a><a class="headerlink" href="#self-reflection-and-exploration" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#self-reflection-and-exploration'"><span>#</span></a></h2>
+<p>You can begin exploring your personal interests and strengths by reflecting on activities, subjects, or tasks that genuinely engage and energize you. Consider what topics or skills you excel at and enjoy investing time in. This is a critical step so it is important to take tim and assess your options. There is no harm in having no idea! That is one of the marvels of this process; it’s a journey of discovery. We are all here to learn so sometimes the best way to find what you’re interested in is to try it out and in the end maybe you don’t. Either way, you learned something new and that is what science is about.</p>
+</section>
+<section id="our-favorite-resources-to-explore-topics">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Our Favorite Resources to Explore Topics!</a><a class="headerlink" href="#our-favorite-resources-to-explore-topics" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#our-favorite-resources-to-explore-topics'"><span>#</span></a></h2>
+<p>It’s totally understandable to have no idea what you know and want to know! Some of the best ways to get exposure, is to watch videos and read resources that include a variety of different topics. Here are our favorites!:</p>
+<ul class="simple">
+<li><p>Scishow: <a class="reference external" href="https://www.youtube.com/channel/UCZYTClx2T1of7BRZ86-8fow">https://www.youtube.com/channel/UCZYTClx2T1of7BRZ86-8fow</a></p></li>
+<li><p>Kurzgesagt – In a Nutshell: <a class="reference external" href="https://www.youtube.com/@kurzgesagt">https://www.youtube.com/@kurzgesagt</a></p></li>
+<li><p>Veritasium: <a class="reference external" href="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA">https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA</a></p></li>
+<li><p>AsapSCIENCE: <a class="reference external" href="https://www.youtube.com/@AsapSCIENCE">https://www.youtube.com/@AsapSCIENCE</a></p></li>
+<li><p>3Blue1Brown: <a class="reference external" href="https://www.youtube.com/c/3blue1brown">https://www.youtube.com/c/3blue1brown</a></p></li>
+</ul>
+<p>You can even access educational resources to learn more about any topic of your choice! Some include:</p>
+<ul class="simple">
+<li><p>Khan Academy: <a class="reference external" href="https://www.khanacademy.org/">https://www.khanacademy.org/</a></p></li>
+<li><p>Coursera: <a class="reference external" href="https://www.coursera.org/my-learning">https://www.coursera.org/my-learning</a></p></li>
+<li><p>Udemy: <a class="reference external" href="https://www.udemy.com/">https://www.udemy.com/</a></p></li>
+<li><p>edX: <a class="reference external" href="https://www.edx.org/">https://www.edx.org/</a></p></li>
+<li><p>Skillshare: <a class="reference external" href="https://www.skillshare.com/en/">https://www.skillshare.com/en/</a></p></li>
+</ul>
+<p>The trick to learning what you don’t know is to jump in! Don’t feel pressured to have it all figured out. Use youtube videos, lessons, and public sources to jump into a topic you have never tested out. You would be surprised to see what you learn and love!</p>
+</section>
+<section id="choosing-a-path">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Choosing a Path</a><a class="headerlink" href="#choosing-a-path" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#choosing-a-path'"><span>#</span></a></h2>
+<p>Choosing a path after exploring potential ideas and topics can be an exciting and nerve wrecking decision. The key is not to put much pressure on it. Instead, take a deep breath and understand that this is a part of the process. The best way to find what you are interested in and a “path” is to plunge right in! And if this isn’t the path for you, don’t worry. You just repeat the process!</p>
+<p>An example of this may include you learning more about neuroscience to see if the brain fascinates you. To pursue this interest, you might watch neuroscience videos, read articles on the topic, and potentially get hooked! Alternatively, you might find it boring and try a different subject like astronomy. There is no right subject or answer.</p>
+</section>
+</section>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<ul>
+<li><a :data-current="activeSection === '#introduction'" class="reference internal" href="#introduction">Introduction</a></li>
+<li><a :data-current="activeSection === '#understanding-your-passions-and-interests'" class="reference internal" href="#understanding-your-passions-and-interests">Understanding Your Passions and Interests</a></li>
+<li><a :data-current="activeSection === '#self-reflection-and-exploration'" class="reference internal" href="#self-reflection-and-exploration">Self-Reflection and Exploration</a></li>
+<li><a :data-current="activeSection === '#our-favorite-resources-to-explore-topics'" class="reference internal" href="#our-favorite-resources-to-explore-topics">Our Favorite Resources to Explore Topics!</a></li>
+<li><a :data-current="activeSection === '#choosing-a-path'" class="reference internal" href="#choosing-a-path">Choosing a Path</a></li>
+</ul>
+</div>
+</aside>
+</main>
+</div>
+</div><footer class="py-6 border-t border-border md:py-0">
+<div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+<div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2024 Youth Research Initiative Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
+</div>
+</div>
+</footer>
+</div>
+<script src="../_static/documentation_options.js?v=5929fcd5"></script>
+<script src="../_static/doctools.js?v=9a2dae69"></script>
+<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+<script defer="defer" src="../_static/theme.js?v=e82a16a3"></script>
+<script src="../_static/design-tabs.js?v=36754332"></script>
+<script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+<script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
+</body>
+</html>

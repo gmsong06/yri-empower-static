@@ -1,0 +1,68 @@
+============
+Finding Your Optimal Subfield
+============
+
+**Author**: Sritej Padmanabhan
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+
+Introduction
+--------------------
+Research is all about being specific. When we have a large topic like biology, we need to recognize the countless subtopics and subfields within this larger subject. Some in Biology would include neuroscience, environmental sciences, Biochemistry, Immunology, and more. Each of these have their own subfields! Hopefully you aren’t overwhelmed yet. In this lesson, we will walk you through the steps to find your own subfield and narrow down your interests. 
+
+Digging in Deep
+----------------
+At this point in your journey, you may have identified 1-3 main fields that you gravitate towards and find interest in. The next step is narrowing down your interests. The way we will do that is in the following steps: 
+
+- First, pick a single field. You may have several that you are interested in, but we should explore each of them individually. Ideally, you want to have only a few fields you are interested in and before continuing onto a subfield, make sure to narrow down your search to one-two fields. You can do this narrow down process by looking at videos and following the steps in *Find what you are interested in.*
+- Now that we have a single field of Interest (and don't worry if you are not completely sure, this is a part of the process), we can begin finding a subfield.You are going to begin looking at hot-topics in your field. For instance, if I am researching Biology then I will search up “Hot topics in Biology”. This allows you to get a grip on topics that are emerging and a potential sub field. In this process, you might find gene-editing and that could be a potential area of interest. 
+- Another strong way to find your sub-field is WIKIPEDIA diving! How this works is you find your subject’s wikipedia. (For instance biology: https://en.wikipedia.org/wiki/Biology) The Amazing thing about Wikipedia is that there are so many links. What you can do now is tap on one of the hyperlinks, read that page, and tap on another hyperlink. After only an hour, you may have gone through 5-7 hyperlinks and gained a lot of knowledge over a certain topic in your field. 
+- Finally, you repeat! You cannot go through every topic in the world, but try to explore some different hot topics in the field and do your wikipedia dive, until you find around 3 sub-topics of interest. The goal is to make your sub-topics as specific as possible. So instead of going from Biology to Biochemistry, you would want to go from Biology —> Biochemistry —> Enzymology, and maybe even further! For instance, my sub-topics could be: Connectomics, Proteomics, and Motor Learning. Try and be as specific as possible and to do this, you need to READ READ READ. It’s a fun process and dont feel overwhelmed or pressured to find a subtopic with every read. Take it as a learning process, and you will naturally find a subtopic; this is the strategy that top youth researchers have done to find their passions. 
+
+This entire process can take from a couple of days to a couple of weeks or maybe even months. It’s completely person to person dependent. A good strategy is to keep a document with all of your ideas and things you have read about. Write a couple topics a day and whether you were interested in them or not! Eventually, you will find something that gets you excited or something you want to learn more about. 
+
+Alternative Methods that are Also Successful
+-----------------------------------------
+A great and one of the most popular ways to find a field and subfield/topic very quickly is to take inspiration from something in your life! Maybe in the news you saw a patient die of Parkinson's Disease or a family member struggles with a condition. This may intrinsically motivate you to explore the area and this is another great way to find a main field and subfield when you are unsure. 
+
+Finally, if you want to directly look for a challenge to solve and are not that dependent on the field, you may want to explore hotspots in news topics and delve deep into one of their topics.
+
+Conclusion
+------------
+The main thing you want to remember, is that this is not meant to be a stressful journey. There are a lot of ways to explore your ideas and interests and the above are the most common and successful ways! There will be times where you have no idea what you are interested in, and other times where you will feel like giving up. When you feel this way, remember the end goal whether it be to make a difference in the world or push to some tangible outcome. Everyone feels this way at some point and it’s important to continue your search and find what you gravitate towards. Overall, enjoy the process and find love in the research you do naturally. It will be an amazing experience!

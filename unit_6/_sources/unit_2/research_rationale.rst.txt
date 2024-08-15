@@ -1,0 +1,67 @@
+============
+Forming a Research Rationale
+============
+
+**Author**: Ankit Biswas, Sritej Padmanabhan
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+Creating a research project is an immense and exciting undertaking. Before jumping into the research methodology, you have to correctly frame your project. We all know the importance of planning, whether it be for a vacation or studying for a test. We plan so we have a smooth journey.
+
+Research is the same way and your research rationale is like your plan guide and any experienced researcher makes a research plan/rationale! Your Rationale can also be used to email professors with your idea in a clear manner! In this lesson we will be showing you the elements of a research rationale and how to make your own!
+
+Let’s dive into it.
+
+The Research Rationale has the following components
+-------------------------------
+
+**Introduction to the topic (4-6 sentences)**: You want to take your literature review and the knowledge you have acquired and write an introduction. This will be the opening to your rationale and introduce the reader to a bit of background on the problem and field. 
+
+**Problem Statement (3-5 sentences)**: The Problem statement discusses the challenge you are trying to address or the existing method you are trying to improve. Think about this as writing the cons of your challenge. 
+
+**Purpose of the Study (2-4 sentences)**: Discuss why you are doing this. What are you attempting to resolve or improve and how will this help society? 
+
+**Significance of the Study (4-6 sentences)**: In the context of your field, why is your research specifically different from existing studies and why will it help other researchers?
+
+**Research Question (1-3 sentences)**: Summarize Your Research Question that you have been developing and make it clear and to the point. 
+
+**Research Hypothesis (1-3 sentences)**: Write your research hypothesis (Usually an If then Statement; If this happens then something else will happen). 
+
+Including these points in your research rationale will allow you to understand and document the formation of your project. This will also allow you to have your project concept condensed into a document to send to mentors, professionals, and others for feedback!
+
+Once you have written your research rationale, you can begin planning your methodology! Take a look at our next Unit on Planning the Methodology to master and define the ideal methodology for your project.

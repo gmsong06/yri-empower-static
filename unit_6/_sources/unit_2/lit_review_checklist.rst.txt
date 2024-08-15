@@ -1,0 +1,130 @@
+============
+Research Question and Literature Review Checklist
+============
+
+**Author**: Ankit Biswas, Sritej Padmanabhan
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+Research Question
+-------------------------------
+
+1. Clear and Specific
+=======================
+- Is the research question clearly stated?
+- Is it specific and focused on a particular issue or problem?
+
+2. Researchable
+================
+- Can the question be answered through empirical data collection and analysis?
+- Is it feasible to address within the constraints of time, resources, and expertise?
+
+3. Relevant
+===========
+- Does the question address a significant issue in the field?
+- Is it relevant to current trends and gaps in the literature?
+
+4. Originality
+============
+- Is the question novel or does it offer a new perspective on an existing issue?
+- Does it contribute to advancing knowledge in the field?
+
+5. Complexity and Scope
+================
+- Is the question appropriately complex, avoiding being too broad or too narrow?
+- Can it be explored in depth within the given scope of the project?
+
+6. Alignment with Objectives
+=====================
+- Does the research question align with the objectives and goals of the study?
+- Does it guide the research design and methodology effectively?
+
+Literature Review
+----------------
+
+1. Comprehensive Coverage
+========================
+- Have you covered a wide range of sources relevant to your research question?
+- Does the review include seminal works, recent studies, and key publications in the field?
+
+2. Critical Analysis
+=====================
+- Have you critically evaluated the strengths and weaknesses of existing research?
+- Are different perspectives and methodologies in the literature discussed?
+
+3. Synthesis of Findings
+=====================
+- Have you synthesized findings from various studies to identify patterns, trends, and gaps?
+- Do you draw connections between different pieces of research to build a cohesive narrative?
+
+4. Contextualization
+=================
+- Does the review place your research question within the context of existing knowledge?
+- Have you highlighted how your study will address gaps or build on prior research?
+
+5. Current and Relevant Sources
+====================
+- Are the sources up-to-date and relevant to the current state of research?
+- Have you included recent publications to ensure the review reflects the latest developments?
+
+6. Methodological Rigor
+=====================
+- Have you assessed the methodological quality of the studies reviewed?
+- Are the limitations and biases of previous research discussed?
+
+7. Theoretical Framework
+===================
+- Does the literature review include relevant theories that underpin your research?
+- Have you discussed how these theories relate to your research question and objectives?
+
+8. Organization and Clarity
+====================
+- Is the literature review well-organized, with clear subheadings and logical flow?
+- Are your arguments and discussions clearly articulated and easy to follow?
+
+9. Citation and Referencing
+======================
+- Have you accurately cited all sources according to the required citation style?
+- Is the reference list complete and formatted correctly?
+
+10. Identification of Research Gap
+====================
+- Have you clearly identified a research gap that your study aims to address?
+- Is the significance of this gap well-explained and justified?
+
+If your research Project Follows this Checklist, then you have a project that is ready to move onto the methodology stage! If not, you may want to reconsider your project and redefine the areas that it lacks. 

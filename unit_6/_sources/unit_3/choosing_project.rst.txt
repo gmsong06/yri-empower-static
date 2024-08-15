@@ -1,0 +1,76 @@
+============
+Choosing a Type of Project
+============
+
+**Author**: Ankit Biswas, Sritej Padmanabhan
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+If you are reading this, you are most likely at the point where you have defined your research rationale, research question, and done proper literature search. Now, you are ready to dive into your project methodology! 
+
+The methodology is the core of any science fair project! It’s how you carry out your experiment and where most of your passion will be created. It’s also one of the most difficult and error prone parts of science research. How do the pros form their own methodologies and carry it out while minimizing mistakes and saving their time? Let’s first talk about the core of finding your methodology: Finding the type of project you have. 
+
+There are multiple types of research projects, but practically every single one falls into one of these categories. Take a moment to see which one you fall into; this will be very important later:
+
+1. **Computational Project**: These Projects primarily involve using computer science or simulation technologies to achieve a certain goal. The methodology relies on the use of computational tools and methods.
+
+2. **Behavioral/Human-based**: Behavioral and human-based projects are the ones that primarily depend on human participants for their projects. For instance, I might be exploring how humans act in reaction to stimuli. In this case, my project’s methodology lies in its use of humans and their traits. 
+
+3. **Chemistry/biology**: Chemistry and Biology projects are those that are primarily wet-lab, meaning you are doing physical work with some organism, molecule, etc. This often involves reaching out to a research lab but can also be done at home. 
+
+4. **Quantitative meta-analysis**: A quantitative meta-analysis is a project that is submitted by doing a literature review as the methodology! This is actually a very popular method in the research world, in which researchers go online and find many papers related to a topic, compare and contrast the data in order to come up with a conclusion. In this case, you do not need to perform your own experiment and are trying to come up with another conclusion based on available literature!
+
+5. **Engineering**: An engineering project is one where you design and build a machine, robot, etc to fulfill an engineering goal. An example is building a drone!
+
+You can use our AI tool nightshade to assess your own project! It’s important to identify this before forming your entire methodology and beginning your project, as each of these require something different and specific.
+
+**Computational projects** may involve computer science knowledge and expertise or the use of specialized software that is not available to everyone! You may need to reach out to get data to work with or specialized access to these tools and simulation software.
+
+**Behavioral and Human-based projects** need to consider before beginning whether they have human participants! For these projects, the key is a large sample size (typically over 30). Do you have the time to get these participants and are there enough in your area? How do you plan to get them? These are all questions to ask. 
+
+**Chemistry and Biology projects** need to discuss the feasibility of their project as well. Can I do this at home? Do I need a lab? These projects often need specialized equipment, tools, and more that are not available in the typical home. Do you have time to email professors and what is your backup plan? Remember, when others are involved it will take significantly longer.
+
+**Quantitative meta-analysis projects** need to really focus on their research question. Is there a discrepancy in the literature that I am trying to redefine? Is this important enough to pursue? Because it is frankly an extensive literature review, you need to make sure your hypothesis and goal is NOT in the literature already. 
+
+**Engineering projects** can also involve specialized equipment and tools. Do you have access to these? Such projects can also become expensive! Do you have the resource feasibility to do this, and if not how can you make this as cheap as possible? Is the cheapest possible still within your price-range and if not are there alternatives? 
+
+|
+
+All of these questions are very important to consider before beginning the project. You need to look at each aspect of your idea and question it. This is what judges, professors, and peers will do at the end of your research project and doing this process at the beginning builds the foundation for success. 
+
+**Take your time at the beginning to save time at the end! It pays off.**

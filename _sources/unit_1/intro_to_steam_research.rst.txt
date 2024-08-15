@@ -1,0 +1,147 @@
+============
+Introduction to STEAM Research
+============
+
+**Author**: Karan Sadiora
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+If you are interested in anything even closely related to Science, Technology, Engineering, Mathematics, or Art (STEAM), you’ve definitely come across the term, “research”. Depending on your field, research has many different pathways that can be taken, but all converge to a common goal: To learn more about the world we live in through the process of ideation, experimentation, and analysis. 
+
+What is Research?
+--------------------
+In STEAM fields particularly, research is the backbone of advancement for whatever you do, being the basis of everything new that is discovered. How can you discover a new mechanism in the world if you never understand how it may work, never learn the background information leading your study, and never understand the process you must take to reach your goals? It can range from the ability of an asteroid to contain life, to the confirmation of a modified medical protein. Ultimately, the main goal of research is to understand the natural world, come up with novel solutions to complex problems, and improve existing solutions to past research. 
+
+Research itself is a lifelong journey; every project is based on previous projects, which are themselves based on previous projects. The ending result is a large chain that starts from a root discovery. While not all studies may be classified with this landmark, they are nevertheless essential to the scientific world and all play their part. Whether you are interested in muscle cells, the laws of physics, or the engineering behind self-driving cars, research allows you to explore the mysteries of the universe while also contributing to the scientific community, one discovery at a time.
+
+.. image:: images/intro_to_steam.png
+   :width: 80%
+   :align: center
+
+.. note::
+    https://www.merriam-webster.com/dictionary/research
+
+.. quizdown::
+
+    ---
+    primary_color: '#543bbf'
+    secondary_color: white
+    text_color: black
+    shuffle_questions: false
+    ---
+
+   ## What is the primary goal of STEAM research?
+
+   - [ ] To make money
+   - [ ] To entertain people
+   - [x] To advance the world
+   - [ ] To be unethical scientists
+
+   ## What is the backbone of discovery in STEAM?
+
+    - [ ] Politics
+    - [x] Research
+    - [ ] Sports
+    - [ ] Randomness
+
+Beyond the Textbook
+--------------------
+Now that you have a sense of what research is, it's important to understand the difference between classroom education and field education. Taking biology for example, in school you may learn about cellular respiration and how animals use glucose to create energy. However, in practice, different living beings have different mechanisms of energy production which were only discovered through the process of experimentation and research. Although having the theoretical knowledge is essential to starting your process, verifying what you know through scientific discovery is what actually leads to your results. 
+
+Textbooks are just one of the types of sources you can use to inform you on your path. They contain the basic background knowledge required to have at least some knowledge of what you wish to research. Other popular sources include research journals, databases, and of course, the internet. Each of these sources have their own pros and cons and depending on your desired field of study, some sources may be more reliable than others. 
+
+.. tip::
+    If you were planning to conduct research to measure the physical properties of a new man made chemical compound, you would use a chemistry textbook to understand the individual elements inside the compound, and synthesize the information you learn from the relevant parts of the book. 
+
+    .. image:: images/stack_of_books.png
+        :width: 50%
+        :align: center
+
+
+.. quizdown::
+
+    ---
+    primary_color: '#543bbf'
+    secondary_color: white
+    text_color: black
+    shuffle_questions: false
+    ---
+
+   ## What would the best resource be if someone wished to conduct research in machine learning?
+
+   - [ ] Wikipedia pages
+   - [ ] Youtube videos
+   - [ ] Social media platforms
+   - [x] Computer science journals
+
+   ## What would the best resource be if someone wished to conduct research in astrophysics or aerospace engineering?
+
+    - [ ] Podcasts
+    - [x] NASA resources
+    - [ ] Fictional books
+    - [ ] Stories
+
+   ## What would the best resource be if someone wished to conduct research in environmental science?
+   
+    - [x] Peer reviewed articles
+    - [ ] Newspapers
+    - [ ] Niche websites
+    - [ ] Online forums
+   
+.. note::
+    https://www.lesswrong.com/posts/xg3hXCYQPJkwHyik2/the-best-textbooks-on-every-subject
+
+.. note::
+    https://paperpile.com/g/academic-research-databases/ 
+
+
+Collaboration and Research Groups
+-----------------------------
+Lastly, research is not something that must be carried out as an individual. Many of the biggest studies conducted in the world contained teams of 4-10 researchers who collaborated together, sometimes even across the world in different countries. The combined efforts of the individual strengths of each researcher aggregate together to create a flawless paper with virtually zero gaps in expertise. In addition, collaborating with researchers also introduces new resources that can be utilized and pooled together. Collaboration also greatly speeds up the research process because, as stated before, each individual has their own responsibilities that contribute to the total work of the group. 
+
+.. tip::
+    When conducting group research on computational neuroplasticity, it would be efficient to have one member who is proficient in computer algorithms, one in machine learning, one in neuroscience, etc.
+
+.. tip::
+    When conducting group research on biochemistry, it would be efficient to have one member who is proficient in organic chemistry, one in cellular and molecular biology, one in anatomy, etc. 
+
+Let’s now learn about how to come up with the perfect research idea! 
+
+.. image:: images/end_image.jpg
+        :width: 80%
+        :align: center

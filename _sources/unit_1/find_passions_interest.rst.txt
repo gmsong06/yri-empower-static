@@ -1,0 +1,86 @@
+============
+Finding Your Passions and Interests
+============
+
+**Author**: Portia Wang, Cecily May, Sarah Osman
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+
+Introduction
+--------------------
+Finding an idea for a research project is one of the most difficult and tedious parts of the process. A lot of the time, you have no idea what you want to pursue, or what you think you would even enjoy researching. In this case, it's always best to start off broad and work your way down to be more specific, slowly finding your niche. In this section, we’ll explore how you can begin your research process by looking into larger areas of science, and following whatever piques your interest. 
+
+Understanding Your Passions and Interests
+----------------------------------------
+Discovering your passions and interests in STEAM research is a crucial first step towards embarking on a fulfilling academic journey. It involves exploring the vast landscape of science, technology, engineering, mathematics, and arts to identify where your interests lie. Think about the moments that have captivated you, whether it's experimenting with gadgets, falling in love with the intricacies of nature, or solving puzzles that challenge your mind. These experiences hold the key to finding. 
+
+.. image:: images/passions_and_interests.png
+        :width: 80%
+        :align: center
+
+
+Self-Reflection and Exploration
+-------------------------------
+You can begin exploring your personal interests and strengths by reflecting on activities, subjects, or tasks that genuinely engage and energize you. Consider what topics or skills you excel at and enjoy investing time in. This is a critical step so it is important to take tim and assess your options. There is no harm in having no idea! That is one of the marvels of this process; it’s a journey of discovery. We are all here to learn so sometimes the best way to find what you’re interested in is to try it out and in the end maybe you don’t. Either way, you learned something new and that is what science is about. 
+
+Our Favorite Resources to Explore Topics!
+------------------------------------
+It’s totally understandable to have no idea what you know and want to know! Some of the best ways to get exposure, is to watch videos and read resources that include a variety of different topics. Here are our favorites!: 
+
+- Scishow: https://www.youtube.com/channel/UCZYTClx2T1of7BRZ86-8fow
+- Kurzgesagt – In a Nutshell: https://www.youtube.com/@kurzgesagt
+- Veritasium: https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA
+- AsapSCIENCE: https://www.youtube.com/@AsapSCIENCE
+- 3Blue1Brown: https://www.youtube.com/c/3blue1brown
+
+You can even access educational resources to learn more about any topic of your choice! Some include:
+
+- Khan Academy: https://www.khanacademy.org/
+- Coursera: https://www.coursera.org/my-learning
+- Udemy: https://www.udemy.com/
+- edX: https://www.edx.org/
+- Skillshare: https://www.skillshare.com/en/
+
+The trick to learning what you don’t know is to jump in! Don’t feel pressured to have it all figured out. Use youtube videos, lessons, and public sources to jump into a topic you have never tested out. You would be surprised to see what you learn and love!
+
+Choosing a Path
+-----------------
+Choosing a path after exploring potential ideas and topics can be an exciting and nerve wrecking decision. The key is not to put much pressure on it. Instead, take a deep breath and understand that this is a part of the process. The best way to find what you are interested in and a “path” is to plunge right in! And if this isn’t the path for you, don’t worry. You just repeat the process! 
+
+An example of this may include you learning more about neuroscience to see if the brain fascinates you. To pursue this interest, you might watch neuroscience videos, read articles on the topic, and potentially get hooked! Alternatively, you might find it boring and try a different subject like astronomy. There is no right subject or answer. 

@@ -1,0 +1,65 @@
+============
+Exploring the Feasibility of the Research Question
+============
+
+**Author**: Yash Sabarwal, Cecily May, Felix Ma
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+Your research question is undoubtedly one of the most important parts of your entire project – it will guide your exploration, methods, experiments, and much more along the way. However, when approaching a brand-new topic with a question in mind, it can often feel overwhelming to know whether your question is a feasible one to tackle at all. While it is true that your knowledge of your question is often unclear at this point in research, a good researcher knows what to look for in deciding whether a question is worth pursuing. 
+
+.. note::
+
+If you are feeling this way, don’t worry because we have all been here. The important thing to do is understand the techniques, tips, and strategies used to overcome this challenge. That is what we will discuss in this lesson: Learning the Minimum knowledge to Gain the Maximum Reward.
+
+Understanding Your Ability
+--------------------------------
+You yourself are the most important aspect to helping your question succeed. First and foremost, a question that you have should also be one that is within your scope of knowledge and capability to explore. This involves carefully and honestly assessing your resources, experience, available time, and any collaborators. For example, money is one of the biggest bottlenecks for any aspiring researcher. While it is possible to apply for research grants and secure funding from various sources, it is definitely important to have a rough idea of how much investigating your question could cost, and whether you would be able to support that. Furthermore, exploring many questions could necessitate the usage of laboratory space. Having this resource available to you can be a big boost, while not having it could present serious hurdles to your investigation. Perhaps most importantly, you should be genuinely interested in your research question. You will be the main driving force behind your research, so if you do not feel motivated to explore your question, then that poses significant challenges to the question’s feasibility. All in all, it is important to give yourself an honest and unfiltered reflection of whether you, as the principal investigator, can carry out your project given realistic life conditions. 
+
+Current External Factors
+-----------------------
+Outside of your own, personal circumstances, science as a whole is ever-changing, and the state of science at the moment can impact the feasibility and meaningfulness of your question. For example, a good question needs to be novel. It could be very specific and niche, but it needs to be something that hasn’t been answered before – after all, if it has already been done, then that significantly diminishes the value of your “exploration.” Another thing a good researcher should consider is the relevance`` of the question. The best questions specifically address problems or unexplored areas, and answering those questions could fill a significant gap in current knowledge, allowing the field to advance forward in some way. Lastly, considering the potential for your answered question to be published in literature should also factor into your question. While it may not be at the forefront of your mind at the initial stages of your research, eventually, your research needs to reach an audience, and the best way to achieve that is through a publication. Academic journals, when evaluating which projects to publish, consider similar variables to your project that you yourself would consider at various points throughout the research process; the question’s meaningfulness, the experimental design, and the impact of the results, among other things. 
+
+Takeaways
+------------
+In short, evaluating the feasibility of a question is a very subjective undertaking. It can be influenced by any number of personal and external factors, which often are beyond your own personal control. However, dedication, passion, and persistence will go a long way in making even the most ambitious targets come within striking distance. 
+
+**If you find your project being infeasible, don’t give up or abandon the idea yet. Take a look at the next lesson to learn how to overcome some barriers that may have you questioning your project feasibility.** 
+
+.. note::
+    `Formulation of Research Question – Stepwise Approach - PMC <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322175/>`_

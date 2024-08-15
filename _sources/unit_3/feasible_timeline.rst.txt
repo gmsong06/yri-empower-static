@@ -1,0 +1,145 @@
+============
+Constructing A Feasible Timeline For Your Project
+============
+
+**Author**: Karan Sadiora, Felix Ma
+
+.. toctree::
+   :maxdepth: 1
+
+   Home <index>
+
+   Introduction <introduction/index>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 4
+
+   Preface <unit_4/preface>
+   Searching for Invisible Stars <unit_4/invisible_stars>
+   Sritej <unit_4/sritej>
+   Microbiological Wars <unit_4/microbiological_wars>
+   Oncology: A Glimmer of Hope <unit_4/oncology>
+   Smelling Cancer <unit_4/smelling_cancer>
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Unit 5
+
+   An Introduction to Data Analysis <unit_5/intro_to_data_analysis>
+   Data Analysis Tools <unit_5/data_analysis_tools>
+   
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+.. contents:: Table of Contents
+   :depth: 3
+
+Research projects are not something that can be done in a weekend. They take several weeks and months to complete effectively and fully, while also ensuring an excellent quality of work. By understanding what your project is on a deeper level and being able to plan out the future in a methodical way, you can create a timeline that organizes your project steps, manages your time well ensuring that you finish as soon as possible, and keeps you on track throughout the whole process. 
+
+.. image:: images/intro_pic.jpg
+   :width: 80%
+   :align: center
+
+Gauging the Scale of Your Project
+----------------------------
+The first step to creating a good project timeline often starts even before the project itself starts. Before you begin working on any project, you should understand its scale: how much effort you will need to put in, the rough time commitment, and any resource limitations associated with your project among many other factors. This step is often difficult for beginners and professionals because of how abstract it can seem. After all, the goal behind this step is to create both an overarching vision and a detailed prediction for your entire project, which hasn’t happened yet! However, with consistent practice, you will find that this step becomes both easier and more important with time. 
+
+.. tip::
+    For example, a computer science project primarily operating online would likely take less time than a biological project of a similar scale. Some factors that lead to this trend include that the CS project is largely computational, while a biological project requires wet lab time for cells to grow, for results to be analyzed, and for travel to and from the physical lab space. 
+
+Allocating Time for Each Step
+------------------------
+After you understand the total time scale for your project and roughly the main parts you have to divide it into, it's time to gain an idea of how long each step will take. The most basic parts of a simple research project are as follows:
+
+1. Planning and coming up with an idea
+2. (Receiving mentorship/guidance from an experienced individual)
+3. Introduction and Background Research
+4. Methodology planning
+5. Experiment
+6. Results and Discussion
+
+Relatively, the planning and experiment parts of the project take the longest, and it is wise to allocate more time to those. On the other hand, the introduction and background research are shorter comparatively and require less time to complete. Take this with a grain of salt, however, as there is no single formula for how long you should spend on each part of your project. Depending on what you have chosen to pursue, some parts may take much longer than others, meaning you must tailor your time frame for each step. Lastly, always consider any interruptions or contingencies that may come your way during your research, and filter in filler time just in case it is needed. It is always better to plan for something that may not occur, compared to not being prepared whatsoever.
+
+.. quizdown::
+
+    ---
+    primary_color: '#543bbf'
+    secondary_color: white
+    text_color: black
+    shuffle_questions: false
+    ---
+
+   ## True or False: It's better to break up the time for your project steps evenly in order to ensure each step gets a similar amount of time. 
+   - [ ] True
+   - [x] False
+
+   ## Why would the introduction of a biochemistry project take longer than the introduction of a computer algorithm study?
+
+    - [x] Biochemistry has much more theory involved, where first the chemicals and their synthesis must be understood, their interactions with other parts of biology must be researched, etc, whereas a computer algorithm study is more mathematical and based less on previous research. 
+
+Creating Deadlines and Staying on Pace
+-------------------------
+Once you have determined how long you will allocate to each step of your project, it's time to write it down into words and create a concrete schedule. Keeping your deadlines in mind is usually not enough to keep you accountable and can cause you to start moving your dates around. Using software such as Notion or Google Calendar allows you to stay organized and plan out your entire timeline in a visually appealing and simple format, also allowing you to see what you have completed and what is coming up.
+
+Lastly, after having everything planned out visually, the only thing left is to follow your plan and stick to your deadlines. Using a planning software or a paper agenda, as mentioned above, spread your workload throughout your allotted time. Leaving something incomplete only to rush it last minute leads to sloppy and inefficient work, whereas working little by little each day allows you to put all of your effort into your research with a fresh and unburdened mind.
+
+.. image:: images/calendar.webp
+   :width: 100%
+   :align: center
+
+.. note::
+    https://calendar.google.com
+
+.. note::
+    https://www.notion.so/help/guides/getting-started-with-notion-calendar
+
+.. note::
+    https://www.uwa.edu.au/students/-/media/Project/UWA/UWA/Students/Docs/STUDYSmarter/HM1-Planning-a-research-project.pdf
+
+External Considerations
+----------------------
+
+However, even with the most detailed planning and structured timeline, there are almost always factors that can significantly affect your project, yet are outside of your direct control. It is important for you, as the researcher, to have an idea of what these considerations could be, and bake flexibility into your timeline. For example, if you are applying for a research grant, it could take weeks or months for your application to be reviewed, and even then, it is not guaranteed to be approved. How will you, as a researcher, continue your project in the meantime, and overcome the potential setback of having your grant application rejected? The answer very often lies in redundancy. Assuming that things will often take as long as they could, scheduling buffer times can be a good way of ensuring that the smallest hiccup doesn’t derail your entire schedule. Frequently, a redundant schedule is also more realistic. Furthermore, you can work to diversify your points of reliance, so that if one important resource that you lean on is compromised or fails, you can still carry on with your project. An example of this would be applying to multiple grants, therefore making the possibility of one rejection much less daunting. Another example could be looking for alternative lab space for your project, even if you already have some available to you. After all, when misfortune strikes, options would be greatly appreciated.
+
+Another frequent consideration you will likely encounter during your project is other people’s schedules. Even if you are undergoing your project independently, you will likely need to seek mentorship or assistance from others. Yet, as everyone is busy, you will often find that scheduling a time to productively meet and discuss your project with someone else, whether that be a classmate or professor, is frustrating and difficult. While there is no way of forcing others to fit your schedule, there are certain ways you can approach collaboration to ease this process:
+
+- Schedule meetings earlier in advance 
+- Have a detailed plan for meetings
+- Try to spark a genuine interest in your project in others
+- Don’t be afraid to follow up!
+
+.. quizdown::
+
+    ---
+    primary_color: '#543bbf'
+    secondary_color: white
+    text_color: black
+    shuffle_questions: false
+    ---
+
+   ## What are some ways of managing deadlines?
+   - [ ] Google Calendar
+   - [ ] Notion
+   - [ ] Paper agendas
+   - [x] All of the above
+
+   ## True or False: With enough planning, it is possible to map out an entire project from start to end.
+
+    - [ ] True
+    - [x] False
+
+   ## What is an effective strategy to prepare for unexpected events affecting your project?
+   - [x] Build in redundancies to your schedule
+   - [ ] Map every minute of your day on a planner
+   - [ ] Attempt to foresee these events before they happen
+   - [ ] Ignore the possibility until they become reality
+
+.. note::
+    `How to create a project timeline: The ultimate guide | Teamwork.com <https://www.teamwork.com/blog/project-timeline/>`_
