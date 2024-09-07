@@ -7,7 +7,7 @@
 <meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Project Empower | Project Empower  documentation</title>
+<title>Project Empower</title>
 <meta content="Project Empower | Project Empower  documentation" property="og:title"/>
 <meta content="Project Empower | Project Empower  documentation" name="twitter:title"/>
 <link href="_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
@@ -32,9 +32,128 @@
       }
       if (!userPreference) {localStorage.setItem('darkMode', mode)}
     </script>
+
+<style>
+  /* Popup Styles */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Lighter dim effect */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's on top */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  }
+  .popup-content {
+    background-color: white;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Make the popup wider */
+    max-width: 600px; /* Set a maximum width */
+    transform: scale(0.8); /* Start smaller */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth scale and fade transition */
+  }
+
+  .popup-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .popup-overlay.active {
+    display: flex;
+    opacity: 1; /* Fade-in effect */
+  }
+  .popup-overlay.active .popup-content {
+    transform: scale(1); /* Pop-up effect */
+    opacity: 1;
+  }
+
+  .popup-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .popup-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  .popup-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4E3BA0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s all
+  }
+  .popup-content button:hover {
+    background-color: #1A1724;
+  }
+
+  /* Keyframes for closing animation */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+
+  .popup-overlay.fade-out {
+    animation: fadeOut 0.3s forwards;
+  }
+
+  /* Keyframes for pop-up animation */
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .popup-overlay.active .popup-content {
+    animation: popIn 0.3s ease forwards; /* Apply the pop-in animation */
+  }
+</style>
+
 </head>
 <body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
-<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
+  <div id="popup" class="popup-overlay">
+    <div class="popup-content">
+      <h2>Hello and welcome to Project Empower!</h2>
+      <p>This is our beta version. Blah blah.</p>
+      <button id="close-popup">Close</button>
+    </div>
+  </div>
+
+  <!-- <dialog id="popup" class="popup-overlay">
+    <div class="popup-content">
+      <p>Welcome to Project Empower!</p>
+      <button id="close-popup">Close</button>
+    </div>
+    <button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
+  </dialog> -->
+
+  <div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
       Skip to content
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
 <div class="hidden mr-4 md:flex">
@@ -225,5 +344,36 @@
 <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
 <script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const popup = document.getElementById('popup');
+    const closeButton = document.getElementById('close-popup');
+
+    // Check if the popup has been shown during this session
+    const popupShown = sessionStorage.getItem('popupShown');
+
+    if (!popupShown) {
+      // Delay adding the 'active' class to ensure styles are applied properly
+      setTimeout(() => {
+        // Show the popup with a pop-up and fade-in effect
+        popup.classList.add('active');
+      }, 50); // Delay to ensure rendering happens first
+
+      // Mark the popup as shown in session storage
+      sessionStorage.setItem('popupShown', 'true');
+    }
+
+    // Handle close button click
+    closeButton.addEventListener('click', function () {
+      // Add fade-out animation
+      popup.classList.add('fade-out');
+
+      // Remove the popup from view after animation
+      setTimeout(() => {
+        popup.classList.remove('active', 'fade-out');
+      }, 300); // Match the duration of the animation
+    });
+  });
+</script>
 </body>
 </html>
