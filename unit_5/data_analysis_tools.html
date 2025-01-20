@@ -1,346 +1,1516 @@
 <!DOCTYPE html>
 
-<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
-<head>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta charset="utf-8"/>
-<meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
-<meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Data Analysis Tools | Project Empower</title>
-<meta content="Data Analysis Tools | Project Empower" property="og:title"/>
-<meta content="Data Analysis Tools | Project Empower" name="twitter:title"/>
-<link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=ecdfb4fc" rel="stylesheet" type="text/css"/>
-<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
-<link href="../_static/styles/custom.css?v=b32d188c" rel="stylesheet" type="text/css"/>
-<link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
-<link href="../_static/yri_icon_dark.png" rel="icon"/>
-<link href="../search.html" rel="search" title="Search"/>
-<link href="../genindex.html" rel="index" title="Index"/>
-<link href="ethics.html" rel="next" title="Ethical Data Analysis Guidelines"/>
-<link href="intro_to_data_analysis.html" rel="prev" title="An Introduction to Data Analysis"/>
-<script>
-    <!-- Prevent Flash of wrong theme -->
-      const userPreference = localStorage.getItem('darkMode');
-      let mode;
-      if (userPreference === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        mode = 'dark';
-        document.documentElement.classList.add('dark');
-      } else {
-        mode = 'light';
-      }
-      if (!userPreference) {localStorage.setItem('darkMode', mode)}
-    </script>
-</head>
-<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
-<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
-      Skip to content
-    </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
-<div class="hidden mr-4 md:flex">
-<a class="flex items-center mr-6" href="../index.html">
-<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/yri_icon_dark.png" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Project Empower</span>
-</a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
-<svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
-</svg>
-<span class="sr-only">Toggle navigation menu</span>
-</button>
-<div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
-<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="../search.html" class="relative flex items-center group" id="searchbox" method="get">
-<input aria-label="Search the docs" class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" id="search-input" name="q" placeholder="Search ..." type="search" x-ref="search"/>
-<kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
-<span class="text-xs">⌘</span>
-    K
-  </kbd>
-</form>
-</div>
-<nav class="flex items-center space-x-1">
-<button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'" aria-label="Color theme switcher" class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button">
-<svg class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z"></path>
-</svg>
-<svg class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z"></path>
-</svg>
-</button>
-</nav>
-</div>
-</div>
-</header>
-<div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
-<a class="!justify-start text-sm md:!hidden bg-background" href="../index.html">
-<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/yri_icon_dark.png" width="16"/><span class="font-bold text-clip whitespace-nowrap">Project Empower</span>
-</a>
-<div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
-<div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
-<p class="caption" role="heading"><span class="caption-text">Unit 1</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../unit_1/intro_to_steam_research.html">Introduction to STEAM Research</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_1/find_passions_interest.html">Finding Your Passions and Interests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_1/optimal_subfield.html">Finding Your Optimal Subfield</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_1/prelim_lit_review.html">How to Write and Conduct a Proper Preliminary Literature Review</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_1/find_question.html">Finding the Right Question</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_1/mentors.html">Mentors</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Unit 2</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../unit_2/lit_review.html">The Literature Review</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_2/learn_gain.html">Learning the Minimum to Gain the Maximum</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_2/feasibility.html">Exploring the Feasibility of the Research Question</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_2/redefine_project.html">Redefining Your Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_2/lit_review_checklist.html">Research Question and Literature Review Checklist</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_2/research_rationale.html">Forming a Research Rationale</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Unit 3</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../unit_3/choosing_project.html">Choosing a Type of Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_3/tools_for_success.html">The Tools for Success</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_3/feasible_timeline.html">Constructing A Feasible Timeline For Your Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_3/stop_checklist.html">STOP. Checklist.</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../unit_4/preface.html">Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_4/invisible_stars.html">Searching for Invisible Stars</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_4/brain_underneath_eyes.html">Sritej</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_4/microbiological_wars.html">Microbiological Wars</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_4/oncology.html">Oncology: A Glimmer of Hope</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_4/smelling_cancer.html">Smelling Cancer</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Unit 5</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro_to_data_analysis.html">An Introduction to Data Analysis</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Analysis Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ethics.html">Ethical Data Analysis Guidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="statistical_analysis.html">Statistical Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interpret_results.html">Interpreting Results in Relation to Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wider_significance.html">Understanding the Wider Significance of Your Findings</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Unit 6</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../unit_6/options_for_future.html">Options for the Future</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_6/writing_academic_paper.html">Writing an Academic Paper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_6/publishing_research.html">Publishing Scientific Papers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_6/creating_research_poster.html">Creating a Research Poster</a></li>
-</ul>
-</nav>
-</div>
-</div>
-<button @click="showSidebar = false" class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100" type="button">
-<svg class="h-4 w-4" fill="currentColor" height="24" stroke="none" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z"></path>
-</svg>
-</button>
-</aside>
-<main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
-<div class="w-full min-w-0 mx-auto">
-<nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
-<a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../index.html">
-<span class="hidden md:inline">Project Empower</span>
-<svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
-<path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
-</svg>
-</a>
-<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Data Analysis Tools</span>
-</nav>
-<div id="content" role="main">
-<section id="data-analysis-tools">
-<h1><a class="toc-backref" href="#id1" role="doc-backlink">Data Analysis Tools</a><a class="headerlink" href="#data-analysis-tools" title="Link to this heading"><span>#</span></a></h1>
-<p><strong>Author</strong>: John Kessler, Ankit Biswas</p>
+<html
+    :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}"
+    class="scroll-smooth"
+    data-content_root="../"
+    lang="en"
+    x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }"
+    x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))"
+>
+    <head>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta charset="utf-8" />
+        <meta
+            content="white"
+            media="(prefers-color-scheme: light)"
+            name="theme-color"
+        />
+        <meta
+            content="black"
+            media="(prefers-color-scheme: dark)"
+            name="theme-color"
+        />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Data Analysis Tools | Project Empower</title>
+        <meta
+            content="Data Analysis Tools | Project Empower"
+            property="og:title"
+        />
+        <meta
+            content="Data Analysis Tools | Project Empower"
+            name="twitter:title"
+        />
+        <link
+            href="../_static/pygments.css?v=8d216cef"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../_static/theme.css?v=ecdfb4fc"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../_static/graphviz.css?v=fd3f3429"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../_static/sphinx-design.min.css?v=87e54e7c"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../_static/styles/custom.css?v=b32d188c"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../_static/awesome-sphinx-design.css?v=a54cf077"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link href="../custom_styles.css" rel="stylesheet" type="text/css" />
+        <script src="../custom_scripts.js"></script>
+        <link href="../_static/yri_icon_dark.png" rel="icon" />
+        <link href="../search.html" rel="search" title="Search" />
+        <link href="../genindex.html" rel="index" title="Index" />
+        <link
+            href="ethics.html"
+            rel="next"
+            title="Ethical Data Analysis Guidelines"
+        />
+        <link
+            href="intro_to_data_analysis.html"
+            rel="prev"
+            title="An Introduction to Data Analysis"
+        />
+        <script>
+            <!-- Prevent Flash of wrong theme -->
+            const userPreference = localStorage.getItem("darkMode");
+            let mode;
+            if (
+                userPreference === "dark" ||
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            ) {
+                mode = "dark";
+                document.documentElement.classList.add("dark");
+            } else {
+                mode = "light";
+            }
+            if (!userPreference) {
+                localStorage.setItem("darkMode", mode);
+            }
+        </script>
+    </head>
+    <body
+        :class="{ 'overflow-hidden': showSidebar }"
+        class="min-h-screen font-sans antialiased bg-background text-foreground"
+        x-data="{ showSidebar: false }"
+    >
+        <div
+            @click.self="showSidebar = false"
+            class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden"
+            x-cloak=""
+            x-show="showSidebar"
+        ></div>
+        <div class="relative flex flex-col min-h-screen" id="page">
+            <a
+                class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100"
+                href="#content"
+            >
+                Skip to content
+            </a>
+            <header
+                class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"
+            >
+                <div class="container flex items-center h-14">
+                    <div class="hidden mr-4 md:flex">
+                        <a class="flex items-center mr-6" href="../index.html">
+                            <img
+                                alt="Logo"
+                                class="mr-2 dark:invert"
+                                height="24"
+                                src="../_static/yri_icon_dark.png"
+                                width="24"
+                            /><span
+                                class="hidden font-bold sm:inline-block text-clip whitespace-nowrap"
+                                >Project Empower</span
+                            >
+                        </a>
+                    </div>
+                    <button
+                        @click="showSidebar = true"
+                        class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden"
+                        type="button"
+                    >
+                        <svg
+                            aria-hidden="true"
+                            fill="currentColor"
+                            height="24"
+                            viewbox="0 96 960 960"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"
+                            ></path>
+                        </svg>
+                        <span class="sr-only">Toggle navigation menu</span>
+                    </button>
+                    <div
+                        class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end"
+                    >
+                        <div class="flex-1 w-full md:w-auto md:flex-none">
+                            <form
+                                @keydown.k.window.meta="$refs.search.focus()"
+                                action="../search.html"
+                                class="relative flex items-center group"
+                                id="searchbox"
+                                method="get"
+                            >
+                                <input
+                                    aria-label="Search the docs"
+                                    class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64"
+                                    id="search-input"
+                                    name="q"
+                                    placeholder="Search ..."
+                                    type="search"
+                                    x-ref="search"
+                                />
+                                <kbd
+                                    class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground"
+                                >
+                                    <span class="text-xs">⌘</span>
+                                    K
+                                </kbd>
+                            </form>
+                        </div>
+                        <nav class="flex items-center space-x-1">
+                            <button
+                                @click="darkMode = darkMode === 'light' ? 'dark' : 'light'"
+                                aria-label="Color theme switcher"
+                                class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9"
+                                type="button"
+                            >
+                                <svg
+                                    class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0"
+                                    fill="currentColor"
+                                    height="24"
+                                    viewbox="0 96 960 960"
+                                    width="24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z"
+                                    ></path>
+                                </svg>
+                                <svg
+                                    class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100"
+                                    fill="currentColor"
+                                    height="24"
+                                    viewbox="0 96 960 960"
+                                    width="24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <div class="flex-1">
+                <div
+                    class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"
+                >
+                    <aside
+                        :aria-hidden="!showSidebar"
+                        :class="{ 'translate-x-0': showSidebar }"
+                        class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky"
+                        id="left-sidebar"
+                    >
+                        <a
+                            class="!justify-start text-sm md:!hidden bg-background"
+                            href="../index.html"
+                        >
+                            <img
+                                alt="Logo"
+                                class="mr-2 dark:invert"
+                                height="16"
+                                src="../_static/yri_icon_dark.png"
+                                width="16"
+                            /><span
+                                class="font-bold text-clip whitespace-nowrap"
+                                >Project Empower</span
+                            >
+                        </a>
+                        <div
+                            class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto"
+                        >
+                            <div
+                                class="overflow-y-auto h-full w-full relative pr-6"
+                            >
+                                <nav
+                                    class="table w-full min-w-full my-6 lg:my-8"
+                                >
+                                    <p class="caption" role="heading">
+                                        <span class="caption-text">Unit 1</span>
+                                    </p>
+                                    <ul>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_1/intro_to_steam_research.html"
+                                                >Introduction to STEAM
+                                                Research</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_1/find_passions_interest.html"
+                                                >Finding Your Passions and
+                                                Interests</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_1/optimal_subfield.html"
+                                                >Finding Your Optimal
+                                                Subfield</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_1/prelim_lit_review.html"
+                                                >How to Write and Conduct a
+                                                Proper Preliminary Literature
+                                                Review</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_1/find_question.html"
+                                                >Finding the Right Question</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_1/mentors.html"
+                                                >Mentors</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <p class="caption" role="heading">
+                                        <span class="caption-text">Unit 2</span>
+                                    </p>
+                                    <ul>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_2/lit_review.html"
+                                                >The Literature Review</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_2/learn_gain.html"
+                                                >Learning the Minimum to Gain
+                                                the Maximum</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_2/feasibility.html"
+                                                >Exploring the Feasibility of
+                                                the Research Question</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_2/redefine_project.html"
+                                                >Redefining Your Project</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_2/lit_review_checklist.html"
+                                                >Research Question and
+                                                Literature Review Checklist</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_2/research_rationale.html"
+                                                >Forming a Research Rationale</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <p class="caption" role="heading">
+                                        <span class="caption-text">Unit 3</span>
+                                    </p>
+                                    <ul>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_3/choosing_project.html"
+                                                >Choosing a Type of Project</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_3/tools_for_success.html"
+                                                >The Tools for Success</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_3/feasible_timeline.html"
+                                                >Constructing A Feasible
+                                                Timeline For Your Project</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_3/stop_checklist.html"
+                                                >STOP. Checklist.</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <p class="caption" role="heading">
+                                        <span class="caption-text">Unit 4</span>
+                                    </p>
+                                    <ul>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_4/preface.html"
+                                                >Preface</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_4/invisible_stars.html"
+                                                >Searching for Invisible
+                                                Stars</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_4/brain_underneath_eyes.html"
+                                                >Sritej</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_4/microbiological_wars.html"
+                                                >Microbiological Wars</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_4/oncology.html"
+                                                >Oncology: A Glimmer of Hope</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_4/smelling_cancer.html"
+                                                >Smelling Cancer</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <p class="caption" role="heading">
+                                        <span class="caption-text">Unit 5</span>
+                                    </p>
+                                    <ul class="current">
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="intro_to_data_analysis.html"
+                                                >An Introduction to Data
+                                                Analysis</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1 current">
+                                            <a
+                                                class="current reference internal"
+                                                href="#"
+                                                >Data Analysis Tools</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="ethics.html"
+                                                >Ethical Data Analysis
+                                                Guidelines</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="statistical_analysis.html"
+                                                >Statistical Analysis</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="interpret_results.html"
+                                                >Interpreting Results in
+                                                Relation to Project</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="wider_significance.html"
+                                                >Understanding the Wider
+                                                Significance of Your Findings</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <p class="caption" role="heading">
+                                        <span class="caption-text">Unit 6</span>
+                                    </p>
+                                    <ul>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_6/options_for_future.html"
+                                                >Options for the Future</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_6/writing_academic_paper.html"
+                                                >Writing an Academic Paper</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_6/publishing_research.html"
+                                                >Publishing Scientific Papers</a
+                                            >
+                                        </li>
+                                        <li class="toctree-l1">
+                                            <a
+                                                class="reference internal"
+                                                href="../unit_6/creating_research_poster.html"
+                                                >Creating a Research Poster</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <button
+                            @click="showSidebar = false"
+                            class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100"
+                            type="button"
+                        >
+                            <svg
+                                class="h-4 w-4"
+                                fill="currentColor"
+                                height="24"
+                                stroke="none"
+                                viewbox="0 96 960 960"
+                                width="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z"
+                                ></path>
+                            </svg>
+                        </button>
+                    </aside>
+                    <main
+                        class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]"
+                    >
+                        <div class="w-full min-w-0 mx-auto">
+                            <nav
+                                aria-label="breadcrumbs"
+                                class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground"
+                            >
+                                <a
+                                    class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground"
+                                    href="../index.html"
+                                >
+                                    <span class="hidden md:inline"
+                                        >Project Empower</span
+                                    >
+                                    <svg
+                                        aria-label="Home"
+                                        class="md:hidden"
+                                        fill="currentColor"
+                                        height="18"
+                                        stroke="none"
+                                        viewbox="0 96 960 960"
+                                        width="18"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <div class="mr-1">/</div>
+                                <span
+                                    aria-current="page"
+                                    class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap"
+                                    >Data Analysis Tools</span
+                                >
+                            </nav>
+                            <div id="content" role="main">
+                                <section id="data-analysis-tools">
+                                    <div
+                                        data-include="../progress_bar.html"
+                                        class="progress-container"
+                                    ></div>
+                                    <br />
+                                    <h1>
+                                        <a
+                                            class="toc-backref"
+                                            href="#id1"
+                                            role="doc-backlink"
+                                            >Data Analysis Tools</a
+                                        ><a
+                                            class="headerlink"
+                                            href="#data-analysis-tools"
+                                            title="Link to this heading"
+                                            ><span>#</span></a
+                                        >
+                                    </h1>
+                                    <p>
+                                        <strong>Author</strong>: John Kessler,
+                                        Ankit Biswas
+                                    </p>
 
-
-
-<nav class="contents" id="table-of-contents">
-<p class="topic-title">Table of Contents</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#data-analysis-tools" id="id1">Data Analysis Tools</a></p>
-<ul>
-<li><p><a class="reference internal" href="#data-analysis-scientific-programming-tools" id="id2">Data Analysis &amp; Scientific Programming Tools</a></p>
-<ul>
-<li><p><a class="reference internal" href="#python-recommended" id="id3">Python (Recommended)</a></p></li>
-<li><p><a class="reference internal" href="#r" id="id4">R</a></p></li>
-<li><p><a class="reference internal" href="#matlab" id="id5">MATLAB</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#other-non-programming-analysis-tools" id="id6">Other Non-Programming Analysis Tools</a></p>
-<ul>
-<li><p><a class="reference internal" href="#data-visualization-tools" id="id7">Data Visualization Tools</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#choosing-the-right-tool-s" id="id8">Choosing the Right Tool(s)</a></p></li>
-</ul>
-</li>
-</ul>
-</nav>
-<section id="data-analysis-scientific-programming-tools">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Data Analysis &amp; Scientific Programming Tools</a><a class="headerlink" href="#data-analysis-scientific-programming-tools" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#data-analysis-scientific-programming-tools'"><span>#</span></a></h2>
-<p>Statistical analysis tools are software applications that enable researchers to perform various statistical tests and calculations on their data. These tools are essential in research fields that involve quantitative and computationally-intensive data analysis techniques, such as economics, biology, and physics. With these applications, you can analyze large pieces of data or compute complicated operations with ease. Below, we discuss some commonly used tools, along with their pros and cons.</p>
-<section id="python-recommended">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">Python (Recommended)</a><a class="headerlink" href="#python-recommended" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#python-recommended'"><span>#</span></a></h3>
-<p>Created in the late 1980s, Python is a high-level beginner-friendly programming language with a rich ecosystem of scientific and data-centered packages that have made it a paradigm in the world of research. According to a 2019 survey by Kaggle, one of the world’s leading companies in data science and machine learning, Python is the preferred language of choice by about 90% of data scientists. Due to its beginner-friendly and readable nature, you can start making your first Python within a matter of minutes! To download Python, visit: <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
-<p><strong>Pros:</strong></p>
-<ul class="simple">
-<li><p>Large open source community</p></li>
-<li><p>Extensive package ecosystem</p></li>
-<li><p>Gradual learning curve</p></li>
-<li><p>Readability and ease of deployment</p></li>
-<li><p>Support for advanced machine learning packages</p></li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul class="simple">
-<li><p>Notoriously slower than low-level languages like C and C++</p></li>
-<li><p>High memory consumption</p></li>
-<li><p>Package maintainers may not have the expertise when compared to other languages (See this Reddit thread: <a class="reference external" href="https://www.reddit.com/r/statistics/comments/8de54s/comment/dxmnaef/">https://www.reddit.com/r/statistics/comments/8de54s/comment/dxmnaef/</a>)</p></li>
-</ul>
-<p>One of the most important features of Python is its mainstay of libraries that are used to produce the science you see in the world’s top journals. Some of the most prominent include:</p>
-<ul class="simple">
-<li><p><strong>NumPy</strong>: A library for numerical computing, providing support for large multi-dimensional arrays and matrices.</p></li>
-<li><p><strong>Pandas</strong>: A library for data manipulation and analysis, offering powerful data structures that can be used to store and compute billions of values (think Excel or Google Sheets but even more versatile)</p></li>
-<li><p><strong>SciPy</strong>: A library for scientific and technical computing, providing many user-friendly and efficient numerical routines.</p></li>
-<li><p><strong>Scikit-Learn</strong>: A large machine learning library that provides an extensive array of various algorithms and complementary validation techniques. With a few lines of code, you can create your own AI!</p></li>
-<li><p><strong>PyTorch/Tensorflow</strong>: Two large deep learning libraries primarily used for the creation of deep learning networks. Developed by Meta and Google respectively, these libraries have been used to create some of the world’s most famous AIs, including ChatGPT and StockFish (the world’s best chess bot)</p></li>
-<li><p><strong>Matplotlib</strong>: A plotting library for creating static, animated, and interactive visualizations in Python. This library is responsible for most plots and graphs seen in scientific literature</p></li>
-</ul>
-<a class="reference internal image-reference" href="../_images/python_libraries.png"><img alt="../_images/python_libraries.png" class="align-center" src="../_images/python_libraries.png" style="width: 80%;"/>
-</a>
-</section>
-<section id="r">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">R</a><a class="headerlink" href="#r" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#r'"><span>#</span></a></h3>
-<p>R is a popular programming language and software environment for statistical computing and graphics. It is widely used in academia and research for data analysis, visualization, and modeling.</p>
-<p>Compared to Python’s host of various libraries from various distributors that have to be combined together in a “library stack,” R’s out-of-the-box statistical features allow for ease of implementation and computing. To download R, visit: <a class="reference external" href="https://cran.r-project.org/mirrors.html">https://cran.r-project.org/mirrors.html</a>.</p>
-<p><strong>Pros:</strong></p>
-<ul class="simple">
-<li><p>Open source</p></li>
-<li><p>Platform-independent</p></li>
-<li><p>Versatile</p></li>
-<li><p>Support for machine-learning primitives</p></li>
-<li><p>Specialized for data handling and statistics</p></li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul class="simple">
-<li><p>Steep learning curve</p></li>
-<li><p>Speed slower than or similar to Python</p></li>
-<li><p>Memory intensive</p></li>
-</ul>
-<p>Here are some of the most widely used R packages:</p>
-<ul class="simple">
-<li><p><strong>Tidyverse</strong>: A collection of versatile and powerful data analysis packages (a metapackage) that cover everything from data importing and cleaning to in-depth analysis of large dataframes.</p></li>
-<li><p><strong>ggplot2</strong>: A powerful data visualization package for creating complex and publication-quality plots. Along with Matplotlib, this package is used to produce a large fraction of the plots seen commonly in scientific literature.</p></li>
-<li><p><strong>caret</strong>: A package for building predictive models using various modeling techniques.</p></li>
-</ul>
-<a class="reference internal image-reference" href="../_images/python_and_r_comparison.png"><img alt="../_images/python_and_r_comparison.png" class="align-center" src="../_images/python_and_r_comparison.png" style="width: 80%;"/>
-</a>
-</section>
-<section id="matlab">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">MATLAB</a><a class="headerlink" href="#matlab" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#matlab'"><span>#</span></a></h3>
-<p>MATLAB is a widely-used proprietary programming language and software environment for numeric computing and scientific simulations. While it has a wide array of uses beyond it, in the context of data science alone, it can be used for a variety of tasks such as data organizing and data cleaning. Get MATLAB here: <a class="reference external" href="https://www.mathworks.com/products/matlab.html">https://www.mathworks.com/products/matlab.html</a>.</p>
-<p><strong>Pros:</strong></p>
-<ul class="simple">
-<li><p>Excellent, detailed documentation</p></li>
-<li><p>Backing of a company</p></li>
-<li><p>Matrix/vector computing</p></li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul class="simple">
-<li><p>Proprietary, closed source</p></li>
-<li><p>Expensive</p></li>
-<li><p>Limited flexibility, not great with AI/ML</p></li>
-</ul>
-<p>Unlike similar languages like R and Python, MATLAB packages are all proprietary and provided through their parent company MathWorks.</p>
-</section>
-</section>
-<section id="other-non-programming-analysis-tools">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Other Non-Programming Analysis Tools</a><a class="headerlink" href="#other-non-programming-analysis-tools" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#other-non-programming-analysis-tools'"><span>#</span></a></h2>
-<p><strong>Excel</strong>: A widely-used proprietary spreadsheet management tool created by Microsoft. Used commonly in behavioral science or business analysis when analyzing small to moderately–sized datasets.</p>
-<p><strong>SPSS (Statistical Package for the Social Sciences)</strong>: A comprehensive statistical software widely used in social sciences, education, and market research. It offers a user-friendly interface and a wide range of statistical procedures.</p>
-<p><strong>SAS (Statistical Analysis System)</strong>: A powerful statistical software suite used extensively in various research areas, including healthcare, finance, and government. It is known for its advanced analytical capabilities and data management tools.</p>
-<p><strong>Minitab</strong>: A statistical software package designed for quality improvement and data analysis in industries and research. It provides a range of statistical tools, including control charts, regression analysis, and experimental design.</p>
-<a class="reference internal image-reference" href="../_images/all_tools.png"><img alt="../_images/all_tools.png" class="align-center" src="../_images/all_tools.png" style="width: 80%;"/>
-</a>
-<section id="data-visualization-tools">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Data Visualization Tools</a><a class="headerlink" href="#data-visualization-tools" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#data-visualization-tools'"><span>#</span></a></h3>
-<p>Data visualization tools transform complex data into visually appealing and understandable formats, such as charts, graphs, maps, and infographics. These tools help researchers communicate their findings effectively and enable stakeholders to grasp complex concepts more easily. Visualizations can reveal patterns, trends, and outliers that may not be immediately apparent in raw data. Beyond what we’ve mentioned above, here are some other useful libraries and packages for data visualization:</p>
-<p><strong>Tableau</strong>: A powerful data visualization and business intelligence tool that allows researchers to create interactive dashboards, charts, and reports. It supports a wide range of data sources and offers advanced analytics capabilities.</p>
-<p><strong>Microsoft Power BI</strong>: A business analytics service that provides data visualization and reporting capabilities. It allows researchers to connect to various data sources, create interactive reports and dashboards, and share insights with colleagues.</p>
-<p><strong>Plotly</strong>: A high-level, declarative charting library that can be used in Python, R, and other programming languages. It offers a wide range of chart types and supports interactive visualizations.</p>
-<p><strong>Bokeh</strong>: A Python library for creating interactive, web-based visualizations. It provides high-performance visualizations for large or streaming datasets and supports a range of chart types and customizations.</p>
-<a class="reference internal image-reference" href="../_images/plot.png"><img alt="../_images/plot.png" class="align-center" src="../_images/plot.png" style="width: 80%;"/>
-</a>
-</section>
-</section>
-<section id="choosing-the-right-tool-s">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Choosing the Right Tool(s)</a><a class="headerlink" href="#choosing-the-right-tool-s" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#choosing-the-right-tool-s'"><span>#</span></a></h2>
-<p>When selecting the appropriate data analysis tool(s) for your research, it is crucial to consider factors such as the nature of your data, the complexity of your analysis requirements, the size of your dataset, and your familiarity with different tools. For statistical analysis, tools like SPSS, SAS, Minitab, and R are popular choices, offering a wide range of statistical techniques. If you require advanced customization and the ability to develop complex algorithms, programming languages like Python, along with their rich ecosystem of data analysis libraries, may be more suitable.</p>
-<p>For data visualization, tools like Tableau, Microsoft Power BI, Plotly, and Bokeh provide powerful capabilities for creating interactive and visually appealing representations of your data. In some cases, a combination of tools may be necessary to address all aspects of your research, such as using a programming language like Python or R for data manipulation and analysis, and then leveraging a visualization tool like Tableau or Plotly for presenting the results.</p>
-<div class="line-block">
-<div class="line"><br/></div>
-</div>
-<div class="quizdown"> ---
- primary_color: '#543bbf'
- secondary_color: white
- text_color: black
- shuffle_questions: false
- ---
-
-## Which programming language is known for its rich ecosystem of data analysis libraries, including NumPy, Pandas, and Matplotlib?
-
- &gt; Only one of these languages was mentioned.
-
-- [ ] Java
-- [ ] C++
-- [x] Python
-- [ ] Ruby
-
-## What is the primary purpose of data visualization tools like Tableau and Microsoft Power BI in research?
-
- - [ ] To perform statistical tests and calculations on data
- - [ ] To transform complex data into visually appealing and understandable formats for better communication of findings
- - [ ] To uncover hidden patterns and relationships within large datasets
- - [x] To provide researchers with a holistic view of their data
-
-
- ## When choosing a data analysis tool for research, which factor should be considered if you require advanced customization and the ability to develop complex algorithms?
-
- - [ ] User-friendly interface
- - [ ] Cost of the tool
- - [ ] Familiarity with the tool
- - [x] Programming capabilities and extensibility</div></section>
-</section>
-</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
-<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
-<ul>
-<li><a :data-current="activeSection === '#data-analysis-scientific-programming-tools'" class="reference internal" href="#data-analysis-scientific-programming-tools">Data Analysis &amp; Scientific Programming Tools</a><ul>
-<li><a :data-current="activeSection === '#python-recommended'" class="reference internal" href="#python-recommended">Python (Recommended)</a></li>
-<li><a :data-current="activeSection === '#r'" class="reference internal" href="#r">R</a></li>
-<li><a :data-current="activeSection === '#matlab'" class="reference internal" href="#matlab">MATLAB</a></li>
-</ul>
-</li>
-<li><a :data-current="activeSection === '#other-non-programming-analysis-tools'" class="reference internal" href="#other-non-programming-analysis-tools">Other Non-Programming Analysis Tools</a><ul>
-<li><a :data-current="activeSection === '#data-visualization-tools'" class="reference internal" href="#data-visualization-tools">Data Visualization Tools</a></li>
-</ul>
-</li>
-<li><a :data-current="activeSection === '#choosing-the-right-tool-s'" class="reference internal" href="#choosing-the-right-tool-s">Choosing the Right Tool(s)</a></li>
-</ul>
-</div>
-</aside>
-</main>
-</div>
-</div><footer class="py-6 border-t border-border md:py-0">
-<div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-<div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2024 Youth Research Initiative</p>
-</div>
-</div>
-</footer>
-</div>
-<script src="../_static/documentation_options.js?v=5929fcd5"></script>
-<script src="../_static/doctools.js?v=9a2dae69"></script>
-<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script defer="defer" src="../_static/theme.js?v=e82a16a3"></script>
-<script src="../_static/design-tabs.js?v=36754332"></script>
-<script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
-<script>quizdown.init({"quizdown_js": "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"});</script>
-</body>
+                                    <nav
+                                        class="contents"
+                                        id="table-of-contents"
+                                    >
+                                        <p class="topic-title">
+                                            Table of Contents
+                                        </p>
+                                        <ul class="simple">
+                                            <li>
+                                                <p>
+                                                    <a
+                                                        class="reference internal"
+                                                        href="#data-analysis-tools"
+                                                        id="id1"
+                                                        >Data Analysis Tools</a
+                                                    >
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>
+                                                            <a
+                                                                class="reference internal"
+                                                                href="#data-analysis-scientific-programming-tools"
+                                                                id="id2"
+                                                                >Data Analysis
+                                                                &amp; Scientific
+                                                                Programming
+                                                                Tools</a
+                                                            >
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>
+                                                                    <a
+                                                                        class="reference internal"
+                                                                        href="#python-recommended"
+                                                                        id="id3"
+                                                                        >Python
+                                                                        (Recommended)</a
+                                                                    >
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>
+                                                                    <a
+                                                                        class="reference internal"
+                                                                        href="#r"
+                                                                        id="id4"
+                                                                        >R</a
+                                                                    >
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>
+                                                                    <a
+                                                                        class="reference internal"
+                                                                        href="#matlab"
+                                                                        id="id5"
+                                                                        >MATLAB</a
+                                                                    >
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <a
+                                                                class="reference internal"
+                                                                href="#other-non-programming-analysis-tools"
+                                                                id="id6"
+                                                                >Other
+                                                                Non-Programming
+                                                                Analysis
+                                                                Tools</a
+                                                            >
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>
+                                                                    <a
+                                                                        class="reference internal"
+                                                                        href="#data-visualization-tools"
+                                                                        id="id7"
+                                                                        >Data
+                                                                        Visualization
+                                                                        Tools</a
+                                                                    >
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <a
+                                                                class="reference internal"
+                                                                href="#choosing-the-right-tool-s"
+                                                                id="id8"
+                                                                >Choosing the
+                                                                Right Tool(s)</a
+                                                            >
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <section
+                                        id="data-analysis-scientific-programming-tools"
+                                    >
+                                        <h2>
+                                            <a
+                                                class="toc-backref"
+                                                href="#id2"
+                                                role="doc-backlink"
+                                                >Data Analysis &amp; Scientific
+                                                Programming Tools</a
+                                            ><a
+                                                class="headerlink"
+                                                href="#data-analysis-scientific-programming-tools"
+                                                title="Link to this heading"
+                                                x-intersect.margin.0%.0%.-70%.0%="activeSection = '#data-analysis-scientific-programming-tools'"
+                                                ><span>#</span></a
+                                            >
+                                        </h2>
+                                        <p>
+                                            Statistical analysis tools are
+                                            software applications that enable
+                                            researchers to perform various
+                                            statistical tests and calculations
+                                            on their data. These tools are
+                                            essential in research fields that
+                                            involve quantitative and
+                                            computationally-intensive data
+                                            analysis techniques, such as
+                                            economics, biology, and physics.
+                                            With these applications, you can
+                                            analyze large pieces of data or
+                                            compute complicated operations with
+                                            ease. Below, we discuss some
+                                            commonly used tools, along with
+                                            their pros and cons.
+                                        </p>
+                                        <section id="python-recommended">
+                                            <h3>
+                                                <a
+                                                    class="toc-backref"
+                                                    href="#id3"
+                                                    role="doc-backlink"
+                                                    >Python (Recommended)</a
+                                                ><a
+                                                    class="headerlink"
+                                                    href="#python-recommended"
+                                                    title="Link to this heading"
+                                                    x-intersect.margin.0%.0%.-70%.0%="activeSection = '#python-recommended'"
+                                                    ><span>#</span></a
+                                                >
+                                            </h3>
+                                            <p>
+                                                Created in the late 1980s,
+                                                Python is a high-level
+                                                beginner-friendly programming
+                                                language with a rich ecosystem
+                                                of scientific and data-centered
+                                                packages that have made it a
+                                                paradigm in the world of
+                                                research. According to a 2019
+                                                survey by Kaggle, one of the
+                                                world’s leading companies in
+                                                data science and machine
+                                                learning, Python is the
+                                                preferred language of choice by
+                                                about 90% of data scientists.
+                                                Due to its beginner-friendly and
+                                                readable nature, you can start
+                                                making your first Python within
+                                                a matter of minutes! To download
+                                                Python, visit:
+                                                <a
+                                                    class="reference external"
+                                                    href="https://www.python.org/downloads/"
+                                                    >https://www.python.org/downloads/</a
+                                                >.
+                                            </p>
+                                            <p><strong>Pros:</strong></p>
+                                            <ul class="simple">
+                                                <li>
+                                                    <p>
+                                                        Large open source
+                                                        community
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Extensive package
+                                                        ecosystem
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Gradual learning curve
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Readability and ease of
+                                                        deployment
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Support for advanced
+                                                        machine learning
+                                                        packages
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p><strong>Cons:</strong></p>
+                                            <ul class="simple">
+                                                <li>
+                                                    <p>
+                                                        Notoriously slower than
+                                                        low-level languages like
+                                                        C and C++
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        High memory consumption
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Package maintainers may
+                                                        not have the expertise
+                                                        when compared to other
+                                                        languages (See this
+                                                        Reddit thread:
+                                                        <a
+                                                            class="reference external"
+                                                            href="https://www.reddit.com/r/statistics/comments/8de54s/comment/dxmnaef/"
+                                                            >https://www.reddit.com/r/statistics/comments/8de54s/comment/dxmnaef/</a
+                                                        >)
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                One of the most important
+                                                features of Python is its
+                                                mainstay of libraries that are
+                                                used to produce the science you
+                                                see in the world’s top journals.
+                                                Some of the most prominent
+                                                include:
+                                            </p>
+                                            <ul class="simple">
+                                                <li>
+                                                    <p>
+                                                        <strong>NumPy</strong>:
+                                                        A library for numerical
+                                                        computing, providing
+                                                        support for large
+                                                        multi-dimensional arrays
+                                                        and matrices.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <strong>Pandas</strong>:
+                                                        A library for data
+                                                        manipulation and
+                                                        analysis, offering
+                                                        powerful data structures
+                                                        that can be used to
+                                                        store and compute
+                                                        billions of values
+                                                        (think Excel or Google
+                                                        Sheets but even more
+                                                        versatile)
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <strong>SciPy</strong>:
+                                                        A library for scientific
+                                                        and technical computing,
+                                                        providing many
+                                                        user-friendly and
+                                                        efficient numerical
+                                                        routines.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <strong
+                                                            >Scikit-Learn</strong
+                                                        >: A large machine
+                                                        learning library that
+                                                        provides an extensive
+                                                        array of various
+                                                        algorithms and
+                                                        complementary validation
+                                                        techniques. With a few
+                                                        lines of code, you can
+                                                        create your own AI!
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <strong
+                                                            >PyTorch/Tensorflow</strong
+                                                        >: Two large deep
+                                                        learning libraries
+                                                        primarily used for the
+                                                        creation of deep
+                                                        learning networks.
+                                                        Developed by Meta and
+                                                        Google respectively,
+                                                        these libraries have
+                                                        been used to create some
+                                                        of the world’s most
+                                                        famous AIs, including
+                                                        ChatGPT and StockFish
+                                                        (the world’s best chess
+                                                        bot)
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <strong
+                                                            >Matplotlib</strong
+                                                        >: A plotting library
+                                                        for creating static,
+                                                        animated, and
+                                                        interactive
+                                                        visualizations in
+                                                        Python. This library is
+                                                        responsible for most
+                                                        plots and graphs seen in
+                                                        scientific literature
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <a
+                                                class="reference internal image-reference"
+                                                href="../_images/python_libraries.png"
+                                                ><img
+                                                    alt="../_images/python_libraries.png"
+                                                    class="align-center"
+                                                    src="../_images/python_libraries.png"
+                                                    style="width: 80%"
+                                                />
+                                            </a>
+                                        </section>
+                                        <section id="r">
+                                            <h3>
+                                                <a
+                                                    class="toc-backref"
+                                                    href="#id4"
+                                                    role="doc-backlink"
+                                                    >R</a
+                                                ><a
+                                                    class="headerlink"
+                                                    href="#r"
+                                                    title="Link to this heading"
+                                                    x-intersect.margin.0%.0%.-70%.0%="activeSection = '#r'"
+                                                    ><span>#</span></a
+                                                >
+                                            </h3>
+                                            <p>
+                                                R is a popular programming
+                                                language and software
+                                                environment for statistical
+                                                computing and graphics. It is
+                                                widely used in academia and
+                                                research for data analysis,
+                                                visualization, and modeling.
+                                            </p>
+                                            <p>
+                                                Compared to Python’s host of
+                                                various libraries from various
+                                                distributors that have to be
+                                                combined together in a “library
+                                                stack,” R’s out-of-the-box
+                                                statistical features allow for
+                                                ease of implementation and
+                                                computing. To download R, visit:
+                                                <a
+                                                    class="reference external"
+                                                    href="https://cran.r-project.org/mirrors.html"
+                                                    >https://cran.r-project.org/mirrors.html</a
+                                                >.
+                                            </p>
+                                            <p><strong>Pros:</strong></p>
+                                            <ul class="simple">
+                                                <li><p>Open source</p></li>
+                                                <li>
+                                                    <p>Platform-independent</p>
+                                                </li>
+                                                <li><p>Versatile</p></li>
+                                                <li>
+                                                    <p>
+                                                        Support for
+                                                        machine-learning
+                                                        primitives
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Specialized for data
+                                                        handling and statistics
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p><strong>Cons:</strong></p>
+                                            <ul class="simple">
+                                                <li>
+                                                    <p>Steep learning curve</p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Speed slower than or
+                                                        similar to Python
+                                                    </p>
+                                                </li>
+                                                <li><p>Memory intensive</p></li>
+                                            </ul>
+                                            <p>
+                                                Here are some of the most widely
+                                                used R packages:
+                                            </p>
+                                            <ul class="simple">
+                                                <li>
+                                                    <p>
+                                                        <strong
+                                                            >Tidyverse</strong
+                                                        >: A collection of
+                                                        versatile and powerful
+                                                        data analysis packages
+                                                        (a metapackage) that
+                                                        cover everything from
+                                                        data importing and
+                                                        cleaning to in-depth
+                                                        analysis of large
+                                                        dataframes.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <strong>ggplot2</strong
+                                                        >: A powerful data
+                                                        visualization package
+                                                        for creating complex and
+                                                        publication-quality
+                                                        plots. Along with
+                                                        Matplotlib, this package
+                                                        is used to produce a
+                                                        large fraction of the
+                                                        plots seen commonly in
+                                                        scientific literature.
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <strong>caret</strong>:
+                                                        A package for building
+                                                        predictive models using
+                                                        various modeling
+                                                        techniques.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <a
+                                                class="reference internal image-reference"
+                                                href="../_images/python_and_r_comparison.png"
+                                                ><img
+                                                    alt="../_images/python_and_r_comparison.png"
+                                                    class="align-center"
+                                                    src="../_images/python_and_r_comparison.png"
+                                                    style="width: 80%"
+                                                />
+                                            </a>
+                                        </section>
+                                        <section id="matlab">
+                                            <h3>
+                                                <a
+                                                    class="toc-backref"
+                                                    href="#id5"
+                                                    role="doc-backlink"
+                                                    >MATLAB</a
+                                                ><a
+                                                    class="headerlink"
+                                                    href="#matlab"
+                                                    title="Link to this heading"
+                                                    x-intersect.margin.0%.0%.-70%.0%="activeSection = '#matlab'"
+                                                    ><span>#</span></a
+                                                >
+                                            </h3>
+                                            <p>
+                                                MATLAB is a widely-used
+                                                proprietary programming language
+                                                and software environment for
+                                                numeric computing and scientific
+                                                simulations. While it has a wide
+                                                array of uses beyond it, in the
+                                                context of data science alone,
+                                                it can be used for a variety of
+                                                tasks such as data organizing
+                                                and data cleaning. Get MATLAB
+                                                here:
+                                                <a
+                                                    class="reference external"
+                                                    href="https://www.mathworks.com/products/matlab.html"
+                                                    >https://www.mathworks.com/products/matlab.html</a
+                                                >.
+                                            </p>
+                                            <p><strong>Pros:</strong></p>
+                                            <ul class="simple">
+                                                <li>
+                                                    <p>
+                                                        Excellent, detailed
+                                                        documentation
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>Backing of a company</p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Matrix/vector computing
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p><strong>Cons:</strong></p>
+                                            <ul class="simple">
+                                                <li>
+                                                    <p>
+                                                        Proprietary, closed
+                                                        source
+                                                    </p>
+                                                </li>
+                                                <li><p>Expensive</p></li>
+                                                <li>
+                                                    <p>
+                                                        Limited flexibility, not
+                                                        great with AI/ML
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                Unlike similar languages like R
+                                                and Python, MATLAB packages are
+                                                all proprietary and provided
+                                                through their parent company
+                                                MathWorks.
+                                            </p>
+                                        </section>
+                                    </section>
+                                    <section
+                                        id="other-non-programming-analysis-tools"
+                                    >
+                                        <h2>
+                                            <a
+                                                class="toc-backref"
+                                                href="#id6"
+                                                role="doc-backlink"
+                                                >Other Non-Programming Analysis
+                                                Tools</a
+                                            ><a
+                                                class="headerlink"
+                                                href="#other-non-programming-analysis-tools"
+                                                title="Link to this heading"
+                                                x-intersect.margin.0%.0%.-70%.0%="activeSection = '#other-non-programming-analysis-tools'"
+                                                ><span>#</span></a
+                                            >
+                                        </h2>
+                                        <p>
+                                            <strong>Excel</strong>: A
+                                            widely-used proprietary spreadsheet
+                                            management tool created by
+                                            Microsoft. Used commonly in
+                                            behavioral science or business
+                                            analysis when analyzing small to
+                                            moderately–sized datasets.
+                                        </p>
+                                        <p>
+                                            <strong
+                                                >SPSS (Statistical Package for
+                                                the Social Sciences)</strong
+                                            >: A comprehensive statistical
+                                            software widely used in social
+                                            sciences, education, and market
+                                            research. It offers a user-friendly
+                                            interface and a wide range of
+                                            statistical procedures.
+                                        </p>
+                                        <p>
+                                            <strong
+                                                >SAS (Statistical Analysis
+                                                System)</strong
+                                            >: A powerful statistical software
+                                            suite used extensively in various
+                                            research areas, including
+                                            healthcare, finance, and government.
+                                            It is known for its advanced
+                                            analytical capabilities and data
+                                            management tools.
+                                        </p>
+                                        <p>
+                                            <strong>Minitab</strong>: A
+                                            statistical software package
+                                            designed for quality improvement and
+                                            data analysis in industries and
+                                            research. It provides a range of
+                                            statistical tools, including control
+                                            charts, regression analysis, and
+                                            experimental design.
+                                        </p>
+                                        <a
+                                            class="reference internal image-reference"
+                                            href="../_images/all_tools.png"
+                                            ><img
+                                                alt="../_images/all_tools.png"
+                                                class="align-center"
+                                                src="../_images/all_tools.png"
+                                                style="width: 80%"
+                                            />
+                                        </a>
+                                        <section id="data-visualization-tools">
+                                            <h3>
+                                                <a
+                                                    class="toc-backref"
+                                                    href="#id7"
+                                                    role="doc-backlink"
+                                                    >Data Visualization Tools</a
+                                                ><a
+                                                    class="headerlink"
+                                                    href="#data-visualization-tools"
+                                                    title="Link to this heading"
+                                                    x-intersect.margin.0%.0%.-70%.0%="activeSection = '#data-visualization-tools'"
+                                                    ><span>#</span></a
+                                                >
+                                            </h3>
+                                            <p>
+                                                Data visualization tools
+                                                transform complex data into
+                                                visually appealing and
+                                                understandable formats, such as
+                                                charts, graphs, maps, and
+                                                infographics. These tools help
+                                                researchers communicate their
+                                                findings effectively and enable
+                                                stakeholders to grasp complex
+                                                concepts more easily.
+                                                Visualizations can reveal
+                                                patterns, trends, and outliers
+                                                that may not be immediately
+                                                apparent in raw data. Beyond
+                                                what we’ve mentioned above, here
+                                                are some other useful libraries
+                                                and packages for data
+                                                visualization:
+                                            </p>
+                                            <p>
+                                                <strong>Tableau</strong>: A
+                                                powerful data visualization and
+                                                business intelligence tool that
+                                                allows researchers to create
+                                                interactive dashboards, charts,
+                                                and reports. It supports a wide
+                                                range of data sources and offers
+                                                advanced analytics capabilities.
+                                            </p>
+                                            <p>
+                                                <strong
+                                                    >Microsoft Power BI</strong
+                                                >: A business analytics service
+                                                that provides data visualization
+                                                and reporting capabilities. It
+                                                allows researchers to connect to
+                                                various data sources, create
+                                                interactive reports and
+                                                dashboards, and share insights
+                                                with colleagues.
+                                            </p>
+                                            <p>
+                                                <strong>Plotly</strong>: A
+                                                high-level, declarative charting
+                                                library that can be used in
+                                                Python, R, and other programming
+                                                languages. It offers a wide
+                                                range of chart types and
+                                                supports interactive
+                                                visualizations.
+                                            </p>
+                                            <p>
+                                                <strong>Bokeh</strong>: A Python
+                                                library for creating
+                                                interactive, web-based
+                                                visualizations. It provides
+                                                high-performance visualizations
+                                                for large or streaming datasets
+                                                and supports a range of chart
+                                                types and customizations.
+                                            </p>
+                                            <a
+                                                class="reference internal image-reference"
+                                                href="../_images/plot.png"
+                                                ><img
+                                                    alt="../_images/plot.png"
+                                                    class="align-center"
+                                                    src="../_images/plot.png"
+                                                    style="width: 80%"
+                                                />
+                                            </a>
+                                        </section>
+                                    </section>
+                                    <section id="choosing-the-right-tool-s">
+                                        <h2>
+                                            <a
+                                                class="toc-backref"
+                                                href="#id8"
+                                                role="doc-backlink"
+                                                >Choosing the Right Tool(s)</a
+                                            ><a
+                                                class="headerlink"
+                                                href="#choosing-the-right-tool-s"
+                                                title="Link to this heading"
+                                                x-intersect.margin.0%.0%.-70%.0%="activeSection = '#choosing-the-right-tool-s'"
+                                                ><span>#</span></a
+                                            >
+                                        </h2>
+                                        <p>
+                                            When selecting the appropriate data
+                                            analysis tool(s) for your research,
+                                            it is crucial to consider factors
+                                            such as the nature of your data, the
+                                            complexity of your analysis
+                                            requirements, the size of your
+                                            dataset, and your familiarity with
+                                            different tools. For statistical
+                                            analysis, tools like SPSS, SAS,
+                                            Minitab, and R are popular choices,
+                                            offering a wide range of statistical
+                                            techniques. If you require advanced
+                                            customization and the ability to
+                                            develop complex algorithms,
+                                            programming languages like Python,
+                                            along with their rich ecosystem of
+                                            data analysis libraries, may be more
+                                            suitable.
+                                        </p>
+                                        <p>
+                                            For data visualization, tools like
+                                            Tableau, Microsoft Power BI, Plotly,
+                                            and Bokeh provide powerful
+                                            capabilities for creating
+                                            interactive and visually appealing
+                                            representations of your data. In
+                                            some cases, a combination of tools
+                                            may be necessary to address all
+                                            aspects of your research, such as
+                                            using a programming language like
+                                            Python or R for data manipulation
+                                            and analysis, and then leveraging a
+                                            visualization tool like Tableau or
+                                            Plotly for presenting the results.
+                                        </p>
+                                        <div class="line-block">
+                                            <div class="line"><br /></div>
+                                        </div>
+                                        <div class="quizdown">
+                                            --- primary_color: '#543bbf'
+                                            secondary_color: white text_color:
+                                            black shuffle_questions: false ---
+                                            ## Which programming language is
+                                            known for its rich ecosystem of data
+                                            analysis libraries, including NumPy,
+                                            Pandas, and Matplotlib? &gt; Only
+                                            one of these languages was
+                                            mentioned. - [ ] Java - [ ] C++ -
+                                            [x] Python - [ ] Ruby ## What is the
+                                            primary purpose of data
+                                            visualization tools like Tableau and
+                                            Microsoft Power BI in research? - [
+                                            ] To perform statistical tests and
+                                            calculations on data - [ ] To
+                                            transform complex data into visually
+                                            appealing and understandable formats
+                                            for better communication of findings
+                                            - [ ] To uncover hidden patterns and
+                                            relationships within large datasets
+                                            - [x] To provide researchers with a
+                                            holistic view of their data ## When
+                                            choosing a data analysis tool for
+                                            research, which factor should be
+                                            considered if you require advanced
+                                            customization and the ability to
+                                            develop complex algorithms? - [ ]
+                                            User-friendly interface - [ ] Cost
+                                            of the tool - [ ] Familiarity with
+                                            the tool - [x] Programming
+                                            capabilities and extensibility
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                        <aside
+                            class="hidden text-sm xl:block"
+                            id="right-sidebar"
+                        >
+                            <div
+                                class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"
+                            >
+                                <p class="font-medium">On this page</p>
+                                <ul>
+                                    <li>
+                                        <a
+                                            :data-current="activeSection === '#data-analysis-scientific-programming-tools'"
+                                            class="reference internal"
+                                            href="#data-analysis-scientific-programming-tools"
+                                            >Data Analysis &amp; Scientific
+                                            Programming Tools</a
+                                        >
+                                        <ul>
+                                            <li>
+                                                <a
+                                                    :data-current="activeSection === '#python-recommended'"
+                                                    class="reference internal"
+                                                    href="#python-recommended"
+                                                    >Python (Recommended)</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    :data-current="activeSection === '#r'"
+                                                    class="reference internal"
+                                                    href="#r"
+                                                    >R</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    :data-current="activeSection === '#matlab'"
+                                                    class="reference internal"
+                                                    href="#matlab"
+                                                    >MATLAB</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a
+                                            :data-current="activeSection === '#other-non-programming-analysis-tools'"
+                                            class="reference internal"
+                                            href="#other-non-programming-analysis-tools"
+                                            >Other Non-Programming Analysis
+                                            Tools</a
+                                        >
+                                        <ul>
+                                            <li>
+                                                <a
+                                                    :data-current="activeSection === '#data-visualization-tools'"
+                                                    class="reference internal"
+                                                    href="#data-visualization-tools"
+                                                    >Data Visualization Tools</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a
+                                            :data-current="activeSection === '#choosing-the-right-tool-s'"
+                                            class="reference internal"
+                                            href="#choosing-the-right-tool-s"
+                                            >Choosing the Right Tool(s)</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </main>
+                </div>
+            </div>
+            <footer class="py-6 border-t border-border md:py-0">
+                <div
+                    class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row"
+                >
+                    <div
+                        class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0"
+                    >
+                        <p
+                            class="text-sm leading-loose text-center text-muted-foreground md:text-left"
+                        >
+                            © 2024 Youth Research Initiative
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script defer="defer" src="../_static/theme.js?v=e82a16a3"></script>
+        <script src="../_static/design-tabs.js?v=36754332"></script>
+        <script src="https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js"></script>
+        <script>
+            quizdown.init({
+                quizdown_js:
+                    "https://cdn.jsdelivr.net/gh/bonartm/quizdown-js@latest/public/build/quizdown.js",
+            });
+        </script>
+    </body>
 </html>
