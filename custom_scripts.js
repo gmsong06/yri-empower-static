@@ -1,3 +1,4 @@
+
 function includeHTML() {
     const elements = document.querySelectorAll("[data-include]");
     elements.forEach(async (el) => {
@@ -25,3 +26,4 @@ window.onscroll = function () {
     document.getElementById("progressBar").style.width =
         scrollPercentage + "%";
 };
+
